@@ -1,7 +1,9 @@
-# UserName [ggomagundan]ggomagundan.github.io
+# UserName 
+
+[ggomagundan](ggomagundan.github.io)
 
 
 ```sh
-touch 
+touch ggomagundan
 ```
 
