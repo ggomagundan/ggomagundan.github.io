@@ -1,26 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ggomagundan github io</title>
-    <description>GGOMAGUNDAN GitHub.io page
+    <title>GGoMaGunDan Github.io</title>
+    <description>RubyOnRails Developer</description>
+    <link>http://ggomagundan.github.io</link>
+    <atom:link href="http://ggomagundan.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>INICLI</title>
+        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+
+&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+
+&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+
+&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sample ordered list&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;Another list item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+
+&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
+Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 </description>
-    <link>http://ggomagundan.github.io/</link>
-    <atom:link href="http://ggomagundan.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Nov 2015 01:14:02 +0900</pubDate>
-    <lastBuildDate>Tue, 24 Nov 2015 01:14:02 +0900</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+        <pubDate>Tue, 22 Sep 2015 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/INICLI/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/INICLI/</guid>
+      </item>
+    
+      <item>
+        <title>Consise Logging Customize</title>
+        <description>&lt;h1 id=&quot;conciselogging&quot;&gt;ConciseLogging&lt;/h1&gt;
+
+&lt;p&gt;Concise request logging for Rails production&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/gshaw/concise_logging/raw/master/img/screenshot.png&quot; alt=&quot;screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Logs a concise single line for each request at &lt;code&gt;:warn&lt;/code&gt; level.  This allows
+logging requests without all the extra logging that &lt;code&gt;:info&lt;/code&gt; level outputs.&lt;/p&gt;
+
+&lt;p&gt;Not suitable for development but ideal for production settings where each
+request and associated parameters is logged.&lt;/p&gt;
+
+&lt;p&gt;Inspired by a &lt;a href=&quot;http://rubyjunky.com/cleaning-up-rails-4-production-logging.html&quot;&gt;blog post on RubyJunky.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Special thanks to &lt;a href=&quot;https://github.com/zohrehj&quot;&gt;Zohreh Jabbari&lt;/a&gt; for doing the
+initial coding and proof of concept.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;gem ‘concise_logging’&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And then execute:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ bundle&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Or install it yourself as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ gem install concise_logging&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Add this to your &lt;code&gt;config/production.rb&lt;/code&gt;.  Configure tagging as per your desires.
+We use tagging to indicate application with a code and 
+environment with a triple letter (e.g., pro = production, dev = development).&lt;/p&gt;
+
+&lt;h1 id=&quot;configure-logger-to-log-warn-and-above&quot;&gt;Configure logger to log warn and above&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;config.log_level = :warn
+config.log_tags = [“ggomagundan-#{Rails.env[0..2]}”]
+config.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(File.join(Rails.root, “log”, “#{Rails.env}.log”)))&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you want to try the logger in development than you have to manually add the
+middleware and attach the log subscriber by adding these lines in your
+&lt;code&gt;config/development.rb&lt;/code&gt; file.  These lines are not needed for production.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Rails.application.middleware.use ConciseLogging::LogMiddleware
+ConciseLogging::LogSubscriber.attach_to :action_controller&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Fork it ( https://github.com/[my-github-username]/concise_logging/fork )&lt;/li&gt;
+  &lt;li&gt;Create your feature branch (&lt;code&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Commit your changes (&lt;code&gt;git commit -am &#39;Add some feature&#39;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Create a new Pull Request&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Mon, 16 Feb 2015 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Concise-Logging-Customize/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Concise-Logging-Customize/</guid>
+      </item>
+    
+      <item>
+        <title>CommaNumber</title>
+        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+
+&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+
+&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+
+&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sample ordered list&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;Another list item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+
+&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
+Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Thu, 11 Dec 2014 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Comma-Number/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Comma-Number/</guid>
+      </item>
     
       <item>
         <title>InfinityIMGs</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://infinityimgs.com/&quot;&gt;InfinityIMGs&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+
+&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+
+&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+
+&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sample ordered list&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;Another list item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+
+&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
+Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 </description>
-        <pubDate>Mon, 24 Nov 2014 00:19:19 +0900</pubDate>
-        <link>http://ggomagundan.github.io/product/2014/11/24/infinity-imgs.html</link>
-        <guid isPermaLink="true">http://ggomagundan.github.io/product/2014/11/24/infinity-imgs.html</guid>
-        
-        
-        <category>product</category>
-        
+        <pubDate>Fri, 24 Oct 2014 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Infinity-imgs/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Infinity-imgs/</guid>
+      </item>
+    
+      <item>
+        <title>Lab Status</title>
+        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+
+&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+
+&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+
+&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sample ordered list&lt;/li&gt;
+  &lt;li&gt;List item&lt;/li&gt;
+  &lt;li&gt;Another list item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+
+&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
+Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Mon, 28 Jan 2013 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Lab-Status/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Lab-Status/</guid>
+      </item>
+    
+      <item>
+        <title>Cookit Youhoo</title>
+        <description>
+</description>
+        <pubDate>Wed, 23 Jan 2013 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/cookit-youhoo/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/cookit-youhoo/</guid>
       </item>
     
   </channel>
