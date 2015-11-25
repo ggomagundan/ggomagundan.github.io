@@ -115,6 +115,21 @@ ConciseLogging::LogSubscriber.attach_to :action_controller&lt;/p&gt;
       </item>
     
       <item>
+        <title>Shorten</title>
+        <description>&lt;h2 id=&quot;shortenurl&quot;&gt;ShortenURL&lt;/h2&gt;
+&lt;p&gt;Make Shorten URL Using &lt;a href=&quot;http://en.wikipedia.org/wiki/Bijection&quot;&gt;bijective Algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It is running on &lt;code&gt;Ruby 2.2.0&lt;/code&gt;, &lt;code&gt;Rails 4.2.0&lt;/code&gt;,&lt;/p&gt;
+
+&lt;p&gt;Reference Code : &lt;a href=&quot;https://gist.github.com/zumbojo/1073996&quot;&gt;zumbojo/bijective.rb&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 07 Feb 2015 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Shorten/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Shorten/</guid>
+      </item>
+    
+      <item>
         <title>CommaNumber</title>
         <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
 
