@@ -7,23 +7,65 @@ proj-num: 01
 ---
 
 
+ 
+Custom Nifty Generators using `lib` Directory
 
-## H2 Heading Looks Like This
+## Import Gem List
 
-Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round. 
+-  [mysql2](https://github.com/brianmario/mysql2) : mysql connector
+- [nifty-generators](https://github.com/ryanb/nifty-generators) : nifty generator
+- [kaminari](https://github.com/amatsuda/kaminari) : pagination 
+- [brakeman](https://github.com/presidentbeef/brakeman) : Security Scanner
+- [bootstrap v4](https://github.com/twbs/bootstrap-rubygem) : front-end framework
+ 
+## Additional
 
-### H3 Heading Looks Like This
+    config/initializers/utf8mb4.rb # For Conflict Encoding
+    
+  
+  - [MySQL UTF8MB4 breaks ActiveRecord](https://github.com/rails/rails/issues/9855)
 
-Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.
+## Preparation
 
-1. Sample ordered list
-2. List item 
-3. Another list item
+    $ cp config/database.yml.sample config/database.yml # if Use mysql
 
-#### H4 Heading Looks Like This
+## File List 
 
-Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.
+####  Action On Controller
+    lib/templates/nifty/scaffold/actions/*.rb 
 
-> This is a sample blockquote. Landjaeger shoulder ham capicola.
-> Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.
+    # Alwalys redirect to index path
+    
+#### Controller File
+    lib/templates/nifty/scaffold/controller.rb
+
+    # Support `Strong Parameter` 
+
+
+####  View File
+    lib/templates/nifty/scaffold/views/erb/*.html.erb
+
+    # Design bootstrap
+
+
+
+## Full documentation 
+
+The Documentation is at https://github.com/ryanb/nifty-generators
+
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+
+## License
+
+This Code is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+ 
 

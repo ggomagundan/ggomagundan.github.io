@@ -9,10 +9,6 @@ proj-num: 02
 
 
 
-
-
-# ConciseLogging
-
 Concise request logging for Rails production
 
 ![screenshot](https://github.com/gshaw/concise_logging/raw/master/img/screenshot.png)
@@ -34,15 +30,17 @@ initial coding and proof of concept.
 
 Add this line to your application's Gemfile:
 
-> gem 'concise_logging'
+```ruby
+gem 'concise_logging'
+```
 
 And then execute:
 
->  $ bundle
+    $ bundle
 
 Or install it yourself as:
 
->  $ gem install concise_logging
+    $ gem install concise_logging
 
 ## Usage
 
@@ -50,17 +48,21 @@ Add this to your `config/production.rb`.  Configure tagging as per your desires.
 We use tagging to indicate application with a code and 
 environment with a triple letter (e.g., pro = production, dev = development).
 
+```ruby
 # Configure logger to log warn and above
->config.log_level = :warn
->config.log_tags = ["ggomagundan-#{Rails.env[0..2]}"]
->config.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(File.join(Rails.root, "log", "#{Rails.env}.log")))
+config.log_level = :warn
+config.log_tags = ["ggomagundan-#{Rails.env[0..2]}"]
+config.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(File.join(Rails.root, "log", "#{Rails.env}.log")))
+```
 
 If you want to try the logger in development than you have to manually add the
 middleware and attach the log subscriber by adding these lines in your
 `config/development.rb` file.  These lines are not needed for production.
 
-> Rails.application.middleware.use ConciseLogging::LogMiddleware
-> ConciseLogging::LogSubscriber.attach_to :action_controller
+```ruby
+Rails.application.middleware.use ConciseLogging::LogMiddleware
+ConciseLogging::LogSubscriber.attach_to :action_controller
+```
 
 ## Contributing
 
@@ -69,4 +71,6 @@ middleware and attach the log subscriber by adding these lines in your
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
 

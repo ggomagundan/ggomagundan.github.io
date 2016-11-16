@@ -46,9 +46,7 @@
 
 
   <div class="entry">
-    <h1 id="conciselogging">ConciseLogging</h1>
-
-<p>Concise request logging for Rails production</p>
+    <p>Concise request logging for Rails production</p>
 
 <p><img src="https://github.com/gshaw/concise_logging/raw/master/img/screenshot.png" alt="screenshot" /></p>
 
@@ -67,21 +65,18 @@ initial coding and proof of concept.</p>
 
 <p>Add this line to your application’s Gemfile:</p>
 
-<blockquote>
-  <p>gem ‘concise_logging’</p>
-</blockquote>
+<pre><code class="language-ruby">gem 'concise_logging'
+</code></pre>
 
 <p>And then execute:</p>
 
-<blockquote>
-  <p>$ bundle</p>
-</blockquote>
+<pre><code>$ bundle
+</code></pre>
 
 <p>Or install it yourself as:</p>
 
-<blockquote>
-  <p>$ gem install concise_logging</p>
-</blockquote>
+<pre><code>$ gem install concise_logging
+</code></pre>
 
 <h2 id="usage">Usage</h2>
 
@@ -89,21 +84,19 @@ initial coding and proof of concept.</p>
 We use tagging to indicate application with a code and 
 environment with a triple letter (e.g., pro = production, dev = development).</p>
 
-<h1 id="configure-logger-to-log-warn-and-above">Configure logger to log warn and above</h1>
-<blockquote>
-  <p>config.log_level = :warn
-config.log_tags = [“ggomagundan-#{Rails.env[0..2]}”]
-config.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(File.join(Rails.root, “log”, “#{Rails.env}.log”)))</p>
-</blockquote>
+<pre><code class="language-ruby"># Configure logger to log warn and above
+config.log_level = :warn
+config.log_tags = ["ggomagundan-#{Rails.env[0..2]}"]
+config.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(File.join(Rails.root, "log", "#{Rails.env}.log")))
+</code></pre>
 
 <p>If you want to try the logger in development than you have to manually add the
 middleware and attach the log subscriber by adding these lines in your
 <code>config/development.rb</code> file.  These lines are not needed for production.</p>
 
-<blockquote>
-  <p>Rails.application.middleware.use ConciseLogging::LogMiddleware
-ConciseLogging::LogSubscriber.attach_to :action_controller</p>
-</blockquote>
+<pre><code class="language-ruby">Rails.application.middleware.use ConciseLogging::LogMiddleware
+ConciseLogging::LogSubscriber.attach_to :action_controller
+</code></pre>
 
 <h2 id="contributing">Contributing</h2>
 

@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <title>Shorten – GGoMaGunDan Github.io – RubyOnRails Developer</title>
+    <title>Clipboard-Toastr-Rails – GGoMaGunDan Github.io – RubyOnRails Developer</title>
 
     <meta name="author" content="GGoMaGunDan Github.io" />
     <meta name="description" content="RubyOnRails Developer">
@@ -40,17 +40,126 @@
 
       <div id="main" role="main" class="container">
         <article class="post">
-  <h1>Shorten</h1>
-  <a href="https://github.com/ggomagundan/shorten" class="large-link" target="_blank">View Project Site <i class="fa fa-external-link"></i></a> 
-  <div class="date">Posted February  7, 2015</div>
+  <h1>Clipboard-Toastr-Rails</h1>
+  <a href="https://github.com/ggomagundan/clipboard-toastr-rails" class="large-link" target="_blank">View Project Site <i class="fa fa-external-link"></i></a> 
+  <div class="date">Posted November 15, 2016</div>
 
 
   <div class="entry">
-    <p>Make Shorten URL Using <a href="http://en.wikipedia.org/wiki/Bijection">bijective Algorithm</a></p>
+    <p><a href="https://badge.fury.io/rb/clipboard-toastr-rails"><img src="https://badge.fury.io/rb/clipboard-toastr-rails.svg" alt="Gem
+Version" /></a>
+<a href="https://travis-ci.org/ggomagundan/clipboard-toastr-rails"><img src="https://travis-ci.org/ggomagundan/clipboard-toastr-rails.svg?branch=master" alt="Build
+Status" /></a></p>
 
-<p>It is running on <code>Ruby 2.2.0</code>, <code>Rails 4.2.0</code>,</p>
+<p>clipboard-toastr-rails gem is the integration of clipboard.js and toastr javascript
+library(using 2.2 Version) for your Rails 4, 5 application.</p>
 
-<p>Reference Code : <a href="https://gist.github.com/zumbojo/1073996">zumbojo/bijective.rb</a></p>
+<p>Ruby gems url: https://rubygems.org/gems/clipboard-toastr-rails</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<pre><code class="language-ruby">gem 'clipboard-toastr-rails'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install clipboard-toastr-rails
+</code></pre>
+
+<p>Now you need to edit your <code>app/assets/javascripts/application.js</code> file
+and add the following line:
+<code>javascript
+//= require clipboard-toastr
+</code></p>
+
+<p>And you need to edit your <code>app/assets/stylesheets/application.css</code> file
+and add the following line:</p>
+
+<pre><code class="language-css">*= require toastr
+</code></pre>
+
+<p>If Use <code>app/assets/stylesheets/application.scss</code> file
+<code>scss
+@import "toastr";
+</code></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Here is the example working code to test with your Rails application.</p>
+
+<p>Add this sample code to your <code>app/assets/javascripts/application.js</code>
+file</p>
+
+<pre><code class="language-javascript">$(document).ready(function(){
+
+  clip = new Clipboard('.copy-target')
+
+  toastr.options = {
+    "positionClass": "toast-bottom-center",
+    ....
+    ....
+  }
+
+  $(".copy-target").click -&gt;
+    toastr.info "Copy Success Alert"
+
+
+});
+</code></pre>
+
+<pre><code class="language-html">
+&lt;html&gt;
+  &lt;head&gt;
+  ...
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    ...
+    ...
+
+    &lt;span class="copy-target" data-clipboard-text="COPY CONTENT"&gt;Copy Link&lt;/span&gt;
+
+    ...
+    ...
+  &lt;/body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+
+<h2 id="full-documentation">Full documentation</h2>
+
+<p>The Documentation is at
+<a href="https://clipboardjs.com/">Clipboard.js Document</a>
+<a href="http://codeseven.github.io/toastr/">Toastr Document</a></p>
+
+<h2 id="change-log">Change Log</h2>
+
+<p>Current Version 1.0.0</p>
+
+<p>This link listing <a href="https://github.com/ggomagundan/clipboard-toastr-rails/blob/master/CHANGE_LOG.md">Change Log</a></p>
+
+<h2 id="contributing">Contributing</h2>
+
+<ol>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT
+License</a>.</p>
 
 
   </div>

@@ -46,28 +46,69 @@
 
 
   <div class="entry">
-    <h2 id="h2-heading-looks-like-this">H2 Heading Looks Like This</h2>
+    <p>Custom Nifty Generators using <code>lib</code> Directory</p>
 
-<p>Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.</p>
+<h2 id="import-gem-list">Import Gem List</h2>
 
-<h3 id="h3-heading-looks-like-this">H3 Heading Looks Like This</h3>
+<ul>
+  <li><a href="https://github.com/brianmario/mysql2">mysql2</a> : mysql connector</li>
+  <li><a href="https://github.com/ryanb/nifty-generators">nifty-generators</a> : nifty generator</li>
+  <li><a href="https://github.com/amatsuda/kaminari">kaminari</a> : pagination</li>
+  <li><a href="https://github.com/presidentbeef/brakeman">brakeman</a> : Security Scanner</li>
+  <li><a href="https://github.com/twbs/bootstrap-rubygem">bootstrap v4</a> : front-end framework</li>
+</ul>
 
-<p>Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.</p>
+<h2 id="additional">Additional</h2>
+
+<pre><code>config/initializers/utf8mb4.rb # For Conflict Encoding
+</code></pre>
+
+<ul>
+  <li><a href="https://github.com/rails/rails/issues/9855">MySQL UTF8MB4 breaks ActiveRecord</a></li>
+</ul>
+
+<h2 id="preparation">Preparation</h2>
+
+<pre><code>$ cp config/database.yml.sample config/database.yml # if Use mysql
+</code></pre>
+
+<h2 id="file-list">File List</h2>
+
+<h4 id="action-on-controller">Action On Controller</h4>
+<pre><code>lib/templates/nifty/scaffold/actions/*.rb 
+
+# Alwalys redirect to index path
+</code></pre>
+
+<h4 id="controller-file">Controller File</h4>
+<pre><code>lib/templates/nifty/scaffold/controller.rb
+
+# Support `Strong Parameter` 
+</code></pre>
+
+<h4 id="view-file">View File</h4>
+<pre><code>lib/templates/nifty/scaffold/views/erb/*.html.erb
+
+# Design bootstrap
+</code></pre>
+
+<h2 id="full-documentation">Full documentation</h2>
+
+<p>The Documentation is at https://github.com/ryanb/nifty-generators</p>
+
+<h2 id="contributing">Contributing</h2>
 
 <ol>
-  <li>Sample ordered list</li>
-  <li>List item</li>
-  <li>Another list item</li>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
 </ol>
 
-<h4 id="h4-heading-looks-like-this">H4 Heading Looks Like This</h4>
+<h2 id="license">License</h2>
 
-<p>Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.</p>
-
-<blockquote>
-  <p>This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.</p>
-</blockquote>
+<p>This Code is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
 
 
   </div>

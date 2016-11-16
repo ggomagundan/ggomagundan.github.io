@@ -46,28 +46,47 @@
 
 
   <div class="entry">
-    <h2 id="h2-heading-looks-like-this">H2 Heading Looks Like This</h2>
+    <p>INICLI is a command-line INIpay interface. Speak it like ‘ini-klie’.</p>
 
-<p>Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.</p>
+<p>INIpay is a SDK for payments integration that is provided by Inicis, a Korean online payments provider. However it only supports PHP and Java officially and unlikely to add support for other <em>minor</em> languages in the foreseeable future. So I created this handy command-line interface that can be executed from my Ruby on Rails project.</p>
 
-<h3 id="h3-heading-looks-like-this">H3 Heading Looks Like This</h3>
+<p>The purpose of INICLI is not only providing language-independent interface that is also easily be embedded in your new and existing applications, but to provide a clean and easy tutorial for developers who are having difficulties understanding and integrating INIpay50 into their projects which I believe are most of them. (Examples coming soon!)</p>
 
-<p>Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.</p>
+<p>INICLI now supports credit card only.</p>
 
-<ol>
-  <li>Sample ordered list</li>
-  <li>List item</li>
-  <li>Another list item</li>
-</ol>
+<h2 id="requirements">Requirements</h2>
+<ul>
+  <li>xNIX operating system. INICLI is tested on OS X 10.8 and Ubuntu 11.</li>
+  <li>PHP &gt; 5.2 with mcrypt, openssl, xml, sockets, mbstring extensions enabled. <code>inicli.php</code> checks all the depencencies.</li>
+  <li>INIpay50 SDK which can be obtained from your business contact at Inicis.</li>
+</ul>
 
-<h4 id="h4-heading-looks-like-this">H4 Heading Looks Like This</h4>
+<h2 id="installation">Installation</h2>
 
-<p>Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.</p>
+<pre><code>$ git clone [repo] INICLI
+$ cd INICLI
+$ mv ~/Download/INIpay50 vendor
+</code></pre>
 
-<blockquote>
-  <p>This is a sample blockquote. Landjaeger shoulder ham capicola. 
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.</p>
-</blockquote>
+<h2 id="usage">Usage</h2>
+
+<pre><code>$ `which php` /path/to/inicli --command=[prepare|chkfake|securepay|cancel] --mid=[your mid] --admin=[your key password] --params='[parameters in JSON format]'
+
+$ `which php` /path/to/inicli --command=prepare --mid=[your mid] --admin=[your key password] --params='"price": "1000", "orderNumber": "#{ORDER_NUMBER}"' // prepare command Sample
+</code></pre>
+
+<p>To avoid copyright issues INICLI doesn’t include INIpay50. You first have to copy INIpay50 under <code>vendor</code> directory as it is so you can find INILib.php under <code>vendor/INIpay50/libs</code>. Otherwise you need to modify source code to set <code>INIFactory::$INIPAY_ROOT</code> on your own.</p>
+
+<h2 id="todo">TODO</h2>
+<ul>
+  <li>Support for other payments methods such as bank transfer, mobile.</li>
+  <li>Support for INIpayMobile payment.</li>
+  <li>Ruby on Rails example code.</li>
+  <li>Better cli options such as supporting short code.</li>
+</ul>
+
+<h2 id="license">License</h2>
+<p>You are free to do whatever you want to. Feedback and contributions welcomed.</p>
 
 
   </div>

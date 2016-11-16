@@ -46,28 +46,62 @@
 
 
   <div class="entry">
-    <h2 id="h2-heading-looks-like-this">H2 Heading Looks Like This</h2>
+    <p>Simple Chat Example using Rails5 ActionCable .</p>
 
-<p>Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.</p>
+<p>And <code>Bootstrap4</code>, <code>mysql</code>, <code>redis</code></p>
 
-<h3 id="h3-heading-looks-like-this">H3 Heading Looks Like This</h3>
+<h2 id="files">Files</h2>
 
-<p>Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.</p>
+<ul>
+  <li>config/initializers/utf8mb4.rb ( For utf8mb4 Indexing)</li>
+  <li>app/views/chats/*</li>
+  <li>app/assets/javascripts/</li>
+  <li>cable.js</li>
+  <li>chats.js.coffee</li>
+  <li>application.js</li>
+  <li>channels/chat.js.coffee</li>
+  <li>app/assets/stylesheets/</li>
+  <li>application.scss</li>
+  <li>chats.scss</li>
+  <li>app/channels/</li>
+  <li>application_cable/channel.rb</li>
+  <li>application_cable/connection.rb</li>
+  <li>chat_channel.rb</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>You must change <code>config/environments/development.rb </code> File</p>
+
+<p>links : https://github.com/rails/rails/blob/61a7239e405982e78de15bd86583514248e6f525/actioncable/lib/action_cable/engine.rb#L25 <br />
+```ruby
+config.action_cable.url = “ws://localhost:3006/cable”
+config.action_cable.allowed_request_origins  = “http://localhost:3006”
+# My Proejct running on 3006 port</p>
+
+<p>```</p>
+
+<p>If you not use mysql, change to <code>Gemfile</code></p>
+
+<pre><code>$ rails db:migrate
+$ rails db:seed
+$ rails s [-p Port]
+</code></pre>
+
+<h2 id="contributing">Contributing</h2>
 
 <ol>
-  <li>Sample ordered list</li>
-  <li>List item</li>
-  <li>Another list item</li>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
 </ol>
 
-<h4 id="h4-heading-looks-like-this">H4 Heading Looks Like This</h4>
+<h2 id="license">License</h2>
 
-<p>Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.</p>
-
-<blockquote>
-  <p>This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.</p>
-</blockquote>
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT
+License</a>.</p>
 
 
   </div>

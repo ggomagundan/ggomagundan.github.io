@@ -7,29 +7,186 @@
     <atom:link href="http://ggomagundan.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Rails5-ActionCable-Chat-Example</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+        <title>Clipboard-Toastr-Rails</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://badge.fury.io/rb/clipboard-toastr-rails&quot;&gt;&lt;img src=&quot;https://badge.fury.io/rb/clipboard-toastr-rails.svg&quot; alt=&quot;Gem
+Version&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://travis-ci.org/ggomagundan/clipboard-toastr-rails&quot;&gt;&lt;img src=&quot;https://travis-ci.org/ggomagundan/clipboard-toastr-rails.svg?branch=master&quot; alt=&quot;Build
+Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+&lt;p&gt;clipboard-toastr-rails gem is the integration of clipboard.js and toastr javascript
+library(using 2.2 Version) for your Rails 4, 5 application.&lt;/p&gt;
 
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+&lt;p&gt;Ruby gems url: https://rubygems.org/gems/clipboard-toastr-rails&lt;/p&gt;
 
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;gem &#39;clipboard-toastr-rails&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then execute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or install it yourself as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install clipboard-toastr-rails
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you need to edit your &lt;code&gt;app/assets/javascripts/application.js&lt;/code&gt; file
+and add the following line:
+&lt;code&gt;javascript
+//= require clipboard-toastr
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And you need to edit your &lt;code&gt;app/assets/stylesheets/application.css&lt;/code&gt; file
+and add the following line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;*= require toastr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If Use &lt;code&gt;app/assets/stylesheets/application.scss&lt;/code&gt; file
+&lt;code&gt;scss
+@import &quot;toastr&quot;;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Here is the example working code to test with your Rails application.&lt;/p&gt;
+
+&lt;p&gt;Add this sample code to your &lt;code&gt;app/assets/javascripts/application.js&lt;/code&gt;
+file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;$(document).ready(function(){
+
+  clip = new Clipboard(&#39;.copy-target&#39;)
+
+  toastr.options = {
+    &quot;positionClass&quot;: &quot;toast-bottom-center&quot;,
+    ....
+    ....
+  }
+
+  $(&quot;.copy-target&quot;).click -&amp;gt;
+    toastr.info &quot;Copy Success Alert&quot;
+
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+  ...
+  &amp;lt;/head&amp;gt;
+
+  &amp;lt;body&amp;gt;
+    ...
+    ...
+
+    &amp;lt;span class=&quot;copy-target&quot; data-clipboard-text=&quot;COPY CONTENT&quot;&amp;gt;Copy Link&amp;lt;/span&amp;gt;
+
+    ...
+    ...
+  &amp;lt;/body&amp;gt;
+
+&amp;lt;/html&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;full-documentation&quot;&gt;Full documentation&lt;/h2&gt;
+
+&lt;p&gt;The Documentation is at
+&lt;a href=&quot;https://clipboardjs.com/&quot;&gt;Clipboard.js Document&lt;/a&gt;
+&lt;a href=&quot;http://codeseven.github.io/toastr/&quot;&gt;Toastr Document&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;change-log&quot;&gt;Change Log&lt;/h2&gt;
+
+&lt;p&gt;Current Version 1.0.0&lt;/p&gt;
+
+&lt;p&gt;This link listing &lt;a href=&quot;https://github.com/ggomagundan/clipboard-toastr-rails/blob/master/CHANGE_LOG.md&quot;&gt;Change Log&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
+  &lt;li&gt;Fork it&lt;/li&gt;
+  &lt;li&gt;Create your feature branch (&lt;code&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Commit your changes (&lt;code&gt;git commit -am &#39;Added some feature&#39;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Create new Pull Request&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
+&lt;p&gt;The gem is available as open source under the terms of the &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT
+License&lt;/a&gt;.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 15 Nov 2016 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Clipboard-Toastr-Rails/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Clipboard-Toastr-Rails/</guid>
+      </item>
+    
+      <item>
+        <title>Rails5-ActionCable-Chat-Example</title>
+        <description>&lt;p&gt;Simple Chat Example using Rails5 ActionCable .&lt;/p&gt;
+
+&lt;p&gt;And &lt;code&gt;Bootstrap4&lt;/code&gt;, &lt;code&gt;mysql&lt;/code&gt;, &lt;code&gt;redis&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;config/initializers/utf8mb4.rb ( For utf8mb4 Indexing)&lt;/li&gt;
+  &lt;li&gt;app/views/chats/*&lt;/li&gt;
+  &lt;li&gt;app/assets/javascripts/&lt;/li&gt;
+  &lt;li&gt;cable.js&lt;/li&gt;
+  &lt;li&gt;chats.js.coffee&lt;/li&gt;
+  &lt;li&gt;application.js&lt;/li&gt;
+  &lt;li&gt;channels/chat.js.coffee&lt;/li&gt;
+  &lt;li&gt;app/assets/stylesheets/&lt;/li&gt;
+  &lt;li&gt;application.scss&lt;/li&gt;
+  &lt;li&gt;chats.scss&lt;/li&gt;
+  &lt;li&gt;app/channels/&lt;/li&gt;
+  &lt;li&gt;application_cable/channel.rb&lt;/li&gt;
+  &lt;li&gt;application_cable/connection.rb&lt;/li&gt;
+  &lt;li&gt;chat_channel.rb&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;You must change &lt;code&gt;config/environments/development.rb &lt;/code&gt; File&lt;/p&gt;
+
+&lt;p&gt;links : https://github.com/rails/rails/blob/61a7239e405982e78de15bd86583514248e6f525/actioncable/lib/action_cable/engine.rb#L25 &lt;br /&gt;
+```ruby
+config.action_cable.url = “ws://localhost:3006/cable”
+config.action_cable.allowed_request_origins  = “http://localhost:3006”
+# My Proejct running on 3006 port&lt;/p&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;If you not use mysql, change to &lt;code&gt;Gemfile&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rails db:migrate
+$ rails db:seed
+$ rails s [-p Port]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Fork it&lt;/li&gt;
+  &lt;li&gt;Create your feature branch (&lt;code&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Commit your changes (&lt;code&gt;git commit -am &#39;Added some feature&#39;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Create new Pull Request&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;The gem is available as open source under the terms of the &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT
+License&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 30 Sep 2016 00:00:00 +0900</pubDate>
@@ -39,28 +196,137 @@ Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon ke
     
       <item>
         <title>Shine-Rails-Example</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+        <description>&lt;p&gt;Rails Project using &lt;a href=&quot;https://github.com/janko-m/shrine&quot;&gt;Shrine&lt;/a&gt; and &lt;a href=&quot;https://github.com/janko-m/tus-ruby-server&quot;&gt;Tus-Ruby-Server&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+&lt;p&gt;config.ru
+```ruby 
+# Add This Lines
+require “tus/server”&lt;/p&gt;
 
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+&lt;p&gt;map “/files” do
+  run Tus::Server
+end
+```&lt;/p&gt;
+
+&lt;p&gt;config/initializers/shrine.rb
+```ruby
+require “shrine”
+require “shrine/storage/file_system”
+require “shrine/storage/url”&lt;/p&gt;
+
+&lt;p&gt;Shrine.storages = {&lt;/p&gt;
+
+&lt;p&gt;cache: Shrine::Storage::Url.new, # temporary
+  store: Shrine::Storage::FileSystem.new(“public”, prefix: “upload_files/store” ), # permanent
+}&lt;/p&gt;
+
+&lt;p&gt;Shrine.plugin :activerecord
+Shrine.plugin :cached_attachment_data # for forms
+Shrine.plugin :logging, logger: Rails.logger
+Shrine.plugin :rack_file
+```&lt;/p&gt;
+
+&lt;p&gt;app/uploder/image_uploader.rb
+```ruby
+class ImageUploader  &amp;lt; Shrine&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;plugin :determine_mime_type
+plugin :restore_cached_data
+plugin :validation_helpers
+
+Attacher.validate do
+  validate_max_size 5.megabytes, message: &#39;is too large (max is 5 MB)&#39;
+  validate_mime_type_inclusion [&#39;image/jpeg&#39;, &#39;image/png&#39;, &#39;image/gif&#39;]
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;end
+```&lt;/p&gt;
+
+&lt;p&gt;app/models/album.rb
+&lt;code&gt;ruby
+class Album &amp;lt; ApplicationRecord
+  include ImageUploader[:image]
+end
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;app/assets/javascripts/application.js
+```javascript&lt;/p&gt;
+
+&lt;p&gt;//= require jquery
+//= require jquery_ujs
+// require turbolinks # turbolinks sometime occured bugs. Then disabled
+turbolinks
+//= require tus&lt;/p&gt;
+
+&lt;p&gt;jQuery(function() {
+ $(“input[type=file]”).on(“change”, function(e) {
+    var file = e.target.files[0];
+    var fileField = $(e.target)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fileField.val(&quot;&quot;);
+
+var upload = new tus.Upload(file, {
+  endpoint: &quot;http://localhost:3006/files&quot;,.
+  metadata: {filename: file.name, content_type: file.type},
+  onError: function(error) {
+    alert(error);
+  },
+  onProgress: function(bytesSent, bytesTotal) {
+    var progress = parseInt(bytesSent / bytesTotal * 100, 10);
+    var percentage = progress.toString() + &#39;%&#39;;
+    progressBar.find(&quot;.progress-bar&quot;).css(&quot;width&quot;, percentage).html(percentage);
+  },
+  onSuccess: function(result) {
+    progressBar.remove();
+
+    var file = {
+      storage: &quot;cache&quot;,
+      id: upload.url,
+      metadata: {
+        filename:  upload.file.name.match(/[^\/\\]+$/)[0], // IE returns full path
+        size:      upload.file.size,
+        mime_type: upload.file.type,
+      }
+    }
+
+    fileField.prev().val(JSON.stringify(file));
+    fileField.after($(&#39;&amp;lt;p&amp;gt; &amp;lt;img src=&quot;&#39; + upload.url + &#39;&quot;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/p&amp;gt;&#39;));
+  }
+});
+
+var progressBar = $(&#39;&amp;lt;div class=&quot;progress&quot; style=&quot;width: 300px&quot;&amp;gt;&amp;lt;div class=&quot;progress-bar&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&#39;).insertBefore(e.target);
+
+upload.start(); }) }); ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;This sample Running server on 3006 port.&lt;/p&gt;
+
+&lt;p&gt;If you wanna another port, change &lt;code&gt;application.js&lt;/code&gt;  file Line 27&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rails s -p3006
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to Help &lt;a href=&quot;https://github.com/janko-m&quot;&gt;janko-m&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
+  &lt;li&gt;Fork it&lt;/li&gt;
+  &lt;li&gt;Create your feature branch (&lt;code&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Commit your changes (&lt;code&gt;git commit -am &#39;Added some feature&#39;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Create new Pull Request&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;The gem is available as open source under the terms of the &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT
+License&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 27 Sep 2016 00:00:00 +0900</pubDate>
@@ -70,28 +336,69 @@ Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon ke
     
       <item>
         <title>Custom Nifty Generators</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+        <description>&lt;p&gt;Custom Nifty Generators using &lt;code&gt;lib&lt;/code&gt; Directory&lt;/p&gt;
 
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+&lt;h2 id=&quot;import-gem-list&quot;&gt;Import Gem List&lt;/h2&gt;
 
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/brianmario/mysql2&quot;&gt;mysql2&lt;/a&gt; : mysql connector&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/ryanb/nifty-generators&quot;&gt;nifty-generators&lt;/a&gt; : nifty generator&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/amatsuda/kaminari&quot;&gt;kaminari&lt;/a&gt; : pagination&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/presidentbeef/brakeman&quot;&gt;brakeman&lt;/a&gt; : Security Scanner&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/twbs/bootstrap-rubygem&quot;&gt;bootstrap v4&lt;/a&gt; : front-end framework&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+&lt;h2 id=&quot;additional&quot;&gt;Additional&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;config/initializers/utf8mb4.rb # For Conflict Encoding
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/issues/9855&quot;&gt;MySQL UTF8MB4 breaks ActiveRecord&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;preparation&quot;&gt;Preparation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cp config/database.yml.sample config/database.yml # if Use mysql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;file-list&quot;&gt;File List&lt;/h2&gt;
+
+&lt;h4 id=&quot;action-on-controller&quot;&gt;Action On Controller&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;lib/templates/nifty/scaffold/actions/*.rb 
+
+# Alwalys redirect to index path
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;controller-file&quot;&gt;Controller File&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;lib/templates/nifty/scaffold/controller.rb
+
+# Support `Strong Parameter` 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;view-file&quot;&gt;View File&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;lib/templates/nifty/scaffold/views/erb/*.html.erb
+
+# Design bootstrap
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;full-documentation&quot;&gt;Full documentation&lt;/h2&gt;
+
+&lt;p&gt;The Documentation is at https://github.com/ryanb/nifty-generators&lt;/p&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
+  &lt;li&gt;Fork it&lt;/li&gt;
+  &lt;li&gt;Create your feature branch (&lt;code&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Commit your changes (&lt;code&gt;git commit -am &#39;Added some feature&#39;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Create new Pull Request&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;This Code is available as open source under the terms of the &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT License&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 06 Sep 2016 00:00:00 +0900</pubDate>
@@ -101,28 +408,147 @@ Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon ke
     
       <item>
         <title>Md-Date-Time-Picker-Rails</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;https://badge.fury.io/rb/md-date-time-picker-rails&quot;&gt;&lt;img src=&quot;https://badge.fury.io/rb/md-date-time-picker-rails.svg&quot; alt=&quot;Gem
+Version&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+&lt;p&gt;md-date-time-picker-rails gem is the integration of md-date-time-picker javascript
+library(using 2.2 Version) for your Rails 4, 5 application.&lt;/p&gt;
 
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+&lt;p&gt;md-date-time-picker is Material Design - Date and Time Picker
+source: https://github.com/PuranjayJain/md-date-time-picker&lt;/p&gt;
 
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+&lt;p&gt;Ruby gems url: https://rubygems.org/gems/md-date-time-picker-rails&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;gem &#39;md-date-time-picker-rails&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then execute:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ bundle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or install it yourself as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install md-date-time-picker-rails
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you need to edit your &lt;code&gt;app/assets/javascripts/application.js&lt;/code&gt; file
+and add the following line:
+&lt;code&gt;javascript
+//= require moment.min
+//= require moment.locales# if using another locale 
+//= require draggabilly.pkgd.min # If using TimeDialog
+//= require mdDateTimePicker
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And you need to edit your &lt;code&gt;app/assets/stylesheets/application.css&lt;/code&gt; file
+and add the following line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;*= require mdDateTimePicker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If Use &lt;code&gt;app/assets/stylesheets/application.scss&lt;/code&gt; file
+&lt;code&gt;scss
+@import &quot;mdDateTimePicker&quot;;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;theme&quot;&gt;Theme&lt;/h2&gt;
+
+&lt;p&gt;mdDateTimePicker provided prebuilt
+&lt;a href=&quot;http://puranjayjain.github.io/md-date-time-picker/&quot;&gt;themes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This Gem progressively support all Themes&lt;/p&gt;
+
+&lt;p&gt;If you apply theme, you need to edit your &lt;code&gt;app/assets/stylesheets/application.scss&lt;/code&gt; or &lt;code&gt;app/assets/stylesheets/application.scss&lt;/code&gt; file
+and change the following line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;# app/assets/stylesheets/application.css
+*= require themes/dark/amber/mdDateTimePicker
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-scss&quot;&gt;# app/assets/stylesheets/application.scss
+@import &quot;themes/dark/amber/mdDateTimePicker&quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Currently,  Support Theme List&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;themes/dark/amber&lt;/code&gt;, &lt;code&gt;themes/dark/blue&lt;/code&gt;, &lt;code&gt;themes/dark/blue-grey&lt;/code&gt;, &lt;code&gt;themes/dark/cyan&lt;/code&gt;, &lt;code&gt;themes/dark/deep-orange&lt;/code&gt;, &lt;code&gt;themes/dark/deep-purple&lt;/code&gt;, &lt;code&gt;themes/dark/green&lt;/code&gt;, &lt;code&gt;themes/dark/grey&lt;/code&gt;,&lt;code&gt;themes/dark/indigo&lt;/code&gt;, &lt;code&gt;themes/dark/light-blue&lt;/code&gt;, &lt;code&gt;themes/dark/light-green&lt;/code&gt;, &lt;code&gt;themes/dark/lime&lt;/code&gt;, &lt;code&gt;themes/dark/orange&lt;/code&gt;, &lt;code&gt;themes/dark/pink&lt;/code&gt;, &lt;code&gt;themes/dark/purple&lt;/code&gt;, &lt;code&gt;themes/dark/red&lt;/code&gt;, &lt;code&gt;themes/dark/teal&lt;/code&gt;, &lt;code&gt;themes/dark/yellow&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;themes/light/amber&lt;/code&gt;, &lt;code&gt;themes/light/blue&lt;/code&gt;, &lt;code&gt;themes/light/blue-grey&lt;/code&gt;, &lt;code&gt;themes/light/cyan&lt;/code&gt;, &lt;code&gt;themes/light/deep-orange&lt;/code&gt;, &lt;code&gt;themes/light/deep-purple&lt;/code&gt;, &lt;code&gt;themes/light/green&lt;/code&gt;, &lt;code&gt;themes/light/grey&lt;/code&gt;,&lt;code&gt;themes/light/indigo&lt;/code&gt;, &lt;code&gt;themes/light/light-blue&lt;/code&gt;, &lt;code&gt;themes/light/light-green&lt;/code&gt;, &lt;code&gt;themes/light/lime&lt;/code&gt;, &lt;code&gt;themes/light/orange&lt;/code&gt;, &lt;code&gt;themes/light/pink&lt;/code&gt;, &lt;code&gt;themes/light/purple&lt;/code&gt;, &lt;code&gt;themes/light/red&lt;/code&gt;, &lt;code&gt;themes/light/teal&lt;/code&gt;, &lt;code&gt;themes/light/yellow&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Here is the example working code to test with your Rails application.&lt;/p&gt;
+
+&lt;p&gt;Add this sample code to your &lt;code&gt;app/assets/javascripts/application.js&lt;/code&gt;
+file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;$(document).ready(function(){
+
+ toggleButton = document.getElementById(&quot;OBJECT_ID&quot;);
+ dialog = new mdDateTimePicker[&quot;default&quot;]({
+   type: &#39;date&#39;,
+   type: &#39;time&#39;,                      # If you wanna TIME
+   future: moment().add(1, &#39;years&#39;),  # Optional
+   trigger: toggleButton              # Optional
+ });
+ toggleButton.addEventListener(&quot;click&quot;, function() {
+    return dialog.toggle();
+  });
+  toggleButton.addEventListener(&quot;onOk&quot;, function(e) {
+    return this.value = dialog.time().format(&#39;L&#39;);
+  });
+
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If use &lt;code&gt;app/assets/javascript/application.coffee&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-coffee&quot;&gt;
+  toggleButton = document.getElementById(&quot;OBJECT_ID&quot;)
+  dialog = new mdDateTimePicker.default(
+    type: &#39;date&#39;,
+    future: moment().add(1, &#39;years&#39;),
+    trigger: toggleButton
+  )
+
+  toggleButton.addEventListener &quot;click&quot;, -&amp;gt;
+    dialog.toggle()
+  toggleButton.addEventListener &quot;onOk&quot;, (e) -&amp;gt;
+    this.value = dialog.time.format(&#39;L&#39;)
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;full-documentation&quot;&gt;Full documentation&lt;/h2&gt;
+
+&lt;p&gt;The Documentation is at
+https://puranjayjain.github.io/md-date-time-picker&lt;/p&gt;
+
+&lt;h2 id=&quot;change-log&quot;&gt;Change Log&lt;/h2&gt;
+
+&lt;p&gt;Current Version 2.1.2&lt;/p&gt;
+
+&lt;p&gt;This link listing &lt;a href=&quot;https://github.com/ggomagundan/md-date-time-picker-rails/blob/master/CHANGE_LOG.md&quot;&gt;Change Log&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
+  &lt;li&gt;Fork it&lt;/li&gt;
+  &lt;li&gt;Create your feature branch (&lt;code&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Commit your changes (&lt;code&gt;git commit -am &#39;Added some feature&#39;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Push to the branch (&lt;code&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Create new Pull Request&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;The gem is available as open source under the terms of the &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT
+License&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
@@ -132,29 +558,7 @@ Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon ke
     
       <item>
         <title>OfferMusic</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
-
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
-
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
-
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
-
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
-
+        <description>
 </description>
         <pubDate>Thu, 26 Nov 2015 00:00:00 +0900</pubDate>
         <link>http://ggomagundan.github.io/Offer-Music/</link>
@@ -163,28 +567,47 @@ Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon ke
     
       <item>
         <title>INICLI</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
+        <description>&lt;p&gt;INICLI is a command-line INIpay interface. Speak it like ‘ini-klie’.&lt;/p&gt;
 
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
+&lt;p&gt;INIpay is a SDK for payments integration that is provided by Inicis, a Korean online payments provider. However it only supports PHP and Java officially and unlikely to add support for other &lt;em&gt;minor&lt;/em&gt; languages in the foreseeable future. So I created this handy command-line interface that can be executed from my Ruby on Rails project.&lt;/p&gt;
 
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
+&lt;p&gt;The purpose of INICLI is not only providing language-independent interface that is also easily be embedded in your new and existing applications, but to provide a clean and easy tutorial for developers who are having difficulties understanding and integrating INIpay50 into their projects which I believe are most of them. (Examples coming soon!)&lt;/p&gt;
 
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
+&lt;p&gt;INICLI now supports credit card only.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;xNIX operating system. INICLI is tested on OS X 10.8 and Ubuntu 11.&lt;/li&gt;
+  &lt;li&gt;PHP &amp;gt; 5.2 with mcrypt, openssl, xml, sockets, mbstring extensions enabled. &lt;code&gt;inicli.php&lt;/code&gt; checks all the depencencies.&lt;/li&gt;
+  &lt;li&gt;INIpay50 SDK which can be obtained from your business contact at Inicis.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git clone [repo] INICLI
+$ cd INICLI
+$ mv ~/Download/INIpay50 vendor
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ `which php` /path/to/inicli --command=[prepare|chkfake|securepay|cancel] --mid=[your mid] --admin=[your key password] --params=&#39;[parameters in JSON format]&#39;
+
+$ `which php` /path/to/inicli --command=prepare --mid=[your mid] --admin=[your key password] --params=&#39;&quot;price&quot;: &quot;1000&quot;, &quot;orderNumber&quot;: &quot;#{ORDER_NUMBER}&quot;&#39; // prepare command Sample
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To avoid copyright issues INICLI doesn’t include INIpay50. You first have to copy INIpay50 under &lt;code&gt;vendor&lt;/code&gt; directory as it is so you can find INILib.php under &lt;code&gt;vendor/INIpay50/libs&lt;/code&gt;. Otherwise you need to modify source code to set &lt;code&gt;INIFactory::$INIPAY_ROOT&lt;/code&gt; on your own.&lt;/p&gt;
+
+&lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for other payments methods such as bank transfer, mobile.&lt;/li&gt;
+  &lt;li&gt;Support for INIpayMobile payment.&lt;/li&gt;
+  &lt;li&gt;Ruby on Rails example code.&lt;/li&gt;
+  &lt;li&gt;Better cli options such as supporting short code.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+&lt;p&gt;You are free to do whatever you want to. Feedback and contributions welcomed.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 22 Sep 2015 00:00:00 +0900</pubDate>
@@ -194,29 +617,7 @@ Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon ke
     
       <item>
         <title>SpreadHere</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
-
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
-
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
-
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
-
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
-
+        <description>
 </description>
         <pubDate>Tue, 16 Jun 2015 00:00:00 +0900</pubDate>
         <link>http://ggomagundan.github.io/Spread-Here/</link>
@@ -225,9 +626,7 @@ Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon ke
     
       <item>
         <title>Consise Logging Customize</title>
-        <description>&lt;h1 id=&quot;conciselogging&quot;&gt;ConciseLogging&lt;/h1&gt;
-
-&lt;p&gt;Concise request logging for Rails production&lt;/p&gt;
+        <description>&lt;p&gt;Concise request logging for Rails production&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/gshaw/concise_logging/raw/master/img/screenshot.png&quot; alt=&quot;screenshot&quot; /&gt;&lt;/p&gt;
 
@@ -246,21 +645,18 @@ initial coding and proof of concept.&lt;/p&gt;
 
 &lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;gem ‘concise_logging’&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;gem &#39;concise_logging&#39;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And then execute:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;$ bundle&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ bundle
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Or install it yourself as:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;$ gem install concise_logging&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;$ gem install concise_logging
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
 
@@ -268,21 +664,19 @@ initial coding and proof of concept.&lt;/p&gt;
 We use tagging to indicate application with a code and 
 environment with a triple letter (e.g., pro = production, dev = development).&lt;/p&gt;
 
-&lt;h1 id=&quot;configure-logger-to-log-warn-and-above&quot;&gt;Configure logger to log warn and above&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;config.log_level = :warn
-config.log_tags = [“ggomagundan-#{Rails.env[0..2]}”]
-config.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(File.join(Rails.root, “log”, “#{Rails.env}.log”)))&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;# Configure logger to log warn and above
+config.log_level = :warn
+config.log_tags = [&quot;ggomagundan-#{Rails.env[0..2]}&quot;]
+config.logger = ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new(File.join(Rails.root, &quot;log&quot;, &quot;#{Rails.env}.log&quot;)))
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you want to try the logger in development than you have to manually add the
 middleware and attach the log subscriber by adding these lines in your
 &lt;code&gt;config/development.rb&lt;/code&gt; file.  These lines are not needed for production.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Rails.application.middleware.use ConciseLogging::LogMiddleware
-ConciseLogging::LogSubscriber.attach_to :action_controller&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;Rails.application.middleware.use ConciseLogging::LogMiddleware
+ConciseLogging::LogSubscriber.attach_to :action_controller
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
 
@@ -302,8 +696,7 @@ ConciseLogging::LogSubscriber.attach_to :action_controller&lt;/p&gt;
     
       <item>
         <title>Shorten</title>
-        <description>&lt;h2 id=&quot;shortenurl&quot;&gt;ShortenURL&lt;/h2&gt;
-&lt;p&gt;Make Shorten URL Using &lt;a href=&quot;http://en.wikipedia.org/wiki/Bijection&quot;&gt;bijective Algorithm&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Make Shorten URL Using &lt;a href=&quot;http://en.wikipedia.org/wiki/Bijection&quot;&gt;bijective Algorithm&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;It is running on &lt;code&gt;Ruby 2.2.0&lt;/code&gt;, &lt;code&gt;Rails 4.2.0&lt;/code&gt;,&lt;/p&gt;
 
@@ -313,37 +706,6 @@ ConciseLogging::LogSubscriber.attach_to :action_controller&lt;/p&gt;
         <pubDate>Sat, 07 Feb 2015 00:00:00 +0900</pubDate>
         <link>http://ggomagundan.github.io/Shorten/</link>
         <guid isPermaLink="true">http://ggomagundan.github.io/Shorten/</guid>
-      </item>
-    
-      <item>
-        <title>CommaNumber</title>
-        <description>&lt;h2 id=&quot;h2-heading-looks-like-this&quot;&gt;H2 Heading Looks Like This&lt;/h2&gt;
-
-&lt;p&gt;Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.&lt;/p&gt;
-
-&lt;h3 id=&quot;h3-heading-looks-like-this&quot;&gt;H3 Heading Looks Like This&lt;/h3&gt;
-
-&lt;p&gt;Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Sample ordered list&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;Another list item&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;h4-heading-looks-like-this&quot;&gt;H4 Heading Looks Like This&lt;/h4&gt;
-
-&lt;p&gt;Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a sample blockquote. Landjaeger shoulder ham capicola. 
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-</description>
-        <pubDate>Thu, 11 Dec 2014 00:00:00 +0900</pubDate>
-        <link>http://ggomagundan.github.io/Comma-Number/</link>
-        <guid isPermaLink="true">http://ggomagundan.github.io/Comma-Number/</guid>
       </item>
     
   </channel>

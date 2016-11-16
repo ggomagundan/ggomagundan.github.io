@@ -46,28 +46,137 @@
 
 
   <div class="entry">
-    <h2 id="h2-heading-looks-like-this">H2 Heading Looks Like This</h2>
+    <p>Rails Project using <a href="https://github.com/janko-m/shrine">Shrine</a> and <a href="https://github.com/janko-m/tus-ruby-server">Tus-Ruby-Server</a></p>
 
-<p>Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.</p>
+<h2 id="files">Files</h2>
 
-<h3 id="h3-heading-looks-like-this">H3 Heading Looks Like This</h3>
+<p>config.ru
+```ruby 
+# Add This Lines
+require “tus/server”</p>
 
-<p>Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.</p>
+<p>map “/files” do
+  run Tus::Server
+end
+```</p>
+
+<p>config/initializers/shrine.rb
+```ruby
+require “shrine”
+require “shrine/storage/file_system”
+require “shrine/storage/url”</p>
+
+<p>Shrine.storages = {</p>
+
+<p>cache: Shrine::Storage::Url.new, # temporary
+  store: Shrine::Storage::FileSystem.new(“public”, prefix: “upload_files/store” ), # permanent
+}</p>
+
+<p>Shrine.plugin :activerecord
+Shrine.plugin :cached_attachment_data # for forms
+Shrine.plugin :logging, logger: Rails.logger
+Shrine.plugin :rack_file
+```</p>
+
+<p>app/uploder/image_uploader.rb
+```ruby
+class ImageUploader  &lt; Shrine</p>
+
+<pre><code>plugin :determine_mime_type
+plugin :restore_cached_data
+plugin :validation_helpers
+
+Attacher.validate do
+  validate_max_size 5.megabytes, message: 'is too large (max is 5 MB)'
+  validate_mime_type_inclusion ['image/jpeg', 'image/png', 'image/gif']
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<p>app/models/album.rb
+<code>ruby
+class Album &lt; ApplicationRecord
+  include ImageUploader[:image]
+end
+</code></p>
+
+<p>app/assets/javascripts/application.js
+```javascript</p>
+
+<p>//= require jquery
+//= require jquery_ujs
+// require turbolinks # turbolinks sometime occured bugs. Then disabled
+turbolinks
+//= require tus</p>
+
+<p>jQuery(function() {
+ $(“input[type=file]”).on(“change”, function(e) {
+    var file = e.target.files[0];
+    var fileField = $(e.target)</p>
+
+<pre><code>fileField.val("");
+
+var upload = new tus.Upload(file, {
+  endpoint: "http://localhost:3006/files",.
+  metadata: {filename: file.name, content_type: file.type},
+  onError: function(error) {
+    alert(error);
+  },
+  onProgress: function(bytesSent, bytesTotal) {
+    var progress = parseInt(bytesSent / bytesTotal * 100, 10);
+    var percentage = progress.toString() + '%';
+    progressBar.find(".progress-bar").css("width", percentage).html(percentage);
+  },
+  onSuccess: function(result) {
+    progressBar.remove();
+
+    var file = {
+      storage: "cache",
+      id: upload.url,
+      metadata: {
+        filename:  upload.file.name.match(/[^\/\\]+$/)[0], // IE returns full path
+        size:      upload.file.size,
+        mime_type: upload.file.type,
+      }
+    }
+
+    fileField.prev().val(JSON.stringify(file));
+    fileField.after($('&lt;p&gt; &lt;img src="' + upload.url + '"&gt;&lt;/img&gt;&lt;/p&gt;'));
+  }
+});
+
+var progressBar = $('&lt;div class="progress" style="width: 300px"&gt;&lt;div class="progress-bar"&gt;&lt;/div&gt;&lt;/div&gt;').insertBefore(e.target);
+
+upload.start(); }) }); ```
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+
+<p>This sample Running server on 3006 port.</p>
+
+<p>If you wanna another port, change <code>application.js</code>  file Line 27</p>
+
+<pre><code>$ rails s -p3006
+</code></pre>
+
+<p>Thanks to Help <a href="https://github.com/janko-m">janko-m</a></p>
+
+<h2 id="contributing">Contributing</h2>
 
 <ol>
-  <li>Sample ordered list</li>
-  <li>List item</li>
-  <li>Another list item</li>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
 </ol>
 
-<h4 id="h4-heading-looks-like-this">H4 Heading Looks Like This</h4>
+<h2 id="license">License</h2>
 
-<p>Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.</p>
-
-<blockquote>
-  <p>This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.</p>
-</blockquote>
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT
+License</a>.</p>
 
 
   </div>

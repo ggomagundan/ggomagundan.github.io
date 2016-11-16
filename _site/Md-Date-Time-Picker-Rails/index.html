@@ -46,28 +46,147 @@
 
 
   <div class="entry">
-    <h2 id="h2-heading-looks-like-this">H2 Heading Looks Like This</h2>
+    <p><a href="https://badge.fury.io/rb/md-date-time-picker-rails"><img src="https://badge.fury.io/rb/md-date-time-picker-rails.svg" alt="Gem
+Version" /></a></p>
 
-<p>Sample paragraph goes here and looks like this. Bacon ipsum dolor sit amet turducken meatloaf boudin pork loin meatball biltong, fatback capicola turkey pork chop. Short ribs boudin landjaeger kevin brisket ground round.</p>
+<p>md-date-time-picker-rails gem is the integration of md-date-time-picker javascript
+library(using 2.2 Version) for your Rails 4, 5 application.</p>
 
-<h3 id="h3-heading-looks-like-this">H3 Heading Looks Like This</h3>
+<p>md-date-time-picker is Material Design - Date and Time Picker
+source: https://github.com/PuranjayJain/md-date-time-picker</p>
 
-<p>Spare ribs strip steak pastrami corned beef bresaola porchetta. Cow fatback tongue prosciutto, short ribs hamburger drumstick beef ribs swine t-bone pancetta meatball strip steak ground round tenderloin.</p>
+<p>Ruby gems url: https://rubygems.org/gems/md-date-time-picker-rails</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<pre><code class="language-ruby">gem 'md-date-time-picker-rails'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install md-date-time-picker-rails
+</code></pre>
+
+<p>Now you need to edit your <code>app/assets/javascripts/application.js</code> file
+and add the following line:
+<code>javascript
+//= require moment.min
+//= require moment.locales# if using another locale 
+//= require draggabilly.pkgd.min # If using TimeDialog
+//= require mdDateTimePicker
+</code></p>
+
+<p>And you need to edit your <code>app/assets/stylesheets/application.css</code> file
+and add the following line:</p>
+
+<pre><code class="language-css">*= require mdDateTimePicker
+</code></pre>
+
+<p>If Use <code>app/assets/stylesheets/application.scss</code> file
+<code>scss
+@import "mdDateTimePicker";
+</code></p>
+
+<h2 id="theme">Theme</h2>
+
+<p>mdDateTimePicker provided prebuilt
+<a href="http://puranjayjain.github.io/md-date-time-picker/">themes</a></p>
+
+<p>This Gem progressively support all Themes</p>
+
+<p>If you apply theme, you need to edit your <code>app/assets/stylesheets/application.scss</code> or <code>app/assets/stylesheets/application.scss</code> file
+and change the following line:</p>
+
+<pre><code class="language-css"># app/assets/stylesheets/application.css
+*= require themes/dark/amber/mdDateTimePicker
+</code></pre>
+
+<pre><code class="language-scss"># app/assets/stylesheets/application.scss
+@import "themes/dark/amber/mdDateTimePicker";
+</code></pre>
+
+<p>Currently,  Support Theme List</p>
+
+<ul>
+  <li><code>themes/dark/amber</code>, <code>themes/dark/blue</code>, <code>themes/dark/blue-grey</code>, <code>themes/dark/cyan</code>, <code>themes/dark/deep-orange</code>, <code>themes/dark/deep-purple</code>, <code>themes/dark/green</code>, <code>themes/dark/grey</code>,<code>themes/dark/indigo</code>, <code>themes/dark/light-blue</code>, <code>themes/dark/light-green</code>, <code>themes/dark/lime</code>, <code>themes/dark/orange</code>, <code>themes/dark/pink</code>, <code>themes/dark/purple</code>, <code>themes/dark/red</code>, <code>themes/dark/teal</code>, <code>themes/dark/yellow</code></li>
+  <li><code>themes/light/amber</code>, <code>themes/light/blue</code>, <code>themes/light/blue-grey</code>, <code>themes/light/cyan</code>, <code>themes/light/deep-orange</code>, <code>themes/light/deep-purple</code>, <code>themes/light/green</code>, <code>themes/light/grey</code>,<code>themes/light/indigo</code>, <code>themes/light/light-blue</code>, <code>themes/light/light-green</code>, <code>themes/light/lime</code>, <code>themes/light/orange</code>, <code>themes/light/pink</code>, <code>themes/light/purple</code>, <code>themes/light/red</code>, <code>themes/light/teal</code>, <code>themes/light/yellow</code></li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>Here is the example working code to test with your Rails application.</p>
+
+<p>Add this sample code to your <code>app/assets/javascripts/application.js</code>
+file</p>
+
+<pre><code class="language-javascript">$(document).ready(function(){
+
+ toggleButton = document.getElementById("OBJECT_ID");
+ dialog = new mdDateTimePicker["default"]({
+   type: 'date',
+   type: 'time',                      # If you wanna TIME
+   future: moment().add(1, 'years'),  # Optional
+   trigger: toggleButton              # Optional
+ });
+ toggleButton.addEventListener("click", function() {
+    return dialog.toggle();
+  });
+  toggleButton.addEventListener("onOk", function(e) {
+    return this.value = dialog.time().format('L');
+  });
+
+});
+</code></pre>
+
+<p>If use <code>app/assets/javascript/application.coffee</code></p>
+
+<pre><code class="language-coffee">
+  toggleButton = document.getElementById("OBJECT_ID")
+  dialog = new mdDateTimePicker.default(
+    type: 'date',
+    future: moment().add(1, 'years'),
+    trigger: toggleButton
+  )
+
+  toggleButton.addEventListener "click", -&gt;
+    dialog.toggle()
+  toggleButton.addEventListener "onOk", (e) -&gt;
+    this.value = dialog.time.format('L')
+
+</code></pre>
+
+<h2 id="full-documentation">Full documentation</h2>
+
+<p>The Documentation is at
+https://puranjayjain.github.io/md-date-time-picker</p>
+
+<h2 id="change-log">Change Log</h2>
+
+<p>Current Version 2.1.2</p>
+
+<p>This link listing <a href="https://github.com/ggomagundan/md-date-time-picker-rails/blob/master/CHANGE_LOG.md">Change Log</a></p>
+
+<h2 id="contributing">Contributing</h2>
 
 <ol>
-  <li>Sample ordered list</li>
-  <li>List item</li>
-  <li>Another list item</li>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
 </ol>
 
-<h4 id="h4-heading-looks-like-this">H4 Heading Looks Like This</h4>
+<h2 id="license">License</h2>
 
-<p>Corned beef pig pancetta drumstick tail, andouille spare ribs jowl prosciutto biltong hamburger short loin pork brisket. Frankfurter kielbasa brisket meatloaf pastrami fatback. Cow t-bone pork chop chuck short ribs spare ribs. Pancetta flank porchetta, turkey tail ball tip tri-tip leberkas beef.</p>
-
-<blockquote>
-  <p>This is a sample blockquote. Landjaeger shoulder ham capicola.
-Pork shoulder fatback, flank pork belly rump short loin meatloaf filet mignon kevin turducken spare ribs sirloin short ribs ham hock.</p>
-</blockquote>
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT
+License</a>.</p>
 
 
   </div>
