@@ -39,6 +39,7 @@ Or install it yourself as:
 
 Now you need to edit your `app/assets/javascripts/application.js` file
 and add the following line:
+
 ``` javascript
 //= require moment.min
 //= require moment.locales# if using another locale 

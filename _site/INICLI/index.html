@@ -57,25 +57,27 @@
 <h2 id="requirements">Requirements</h2>
 <ul>
   <li>xNIX operating system. INICLI is tested on OS X 10.8 and Ubuntu 11.</li>
-  <li>PHP &gt; 5.2 with mcrypt, openssl, xml, sockets, mbstring extensions enabled. <code>inicli.php</code> checks all the depencencies.</li>
+  <li>PHP &gt; 5.2 with mcrypt, openssl, xml, sockets, mbstring extensions enabled. <code class="highlighter-rouge">inicli.php</code> checks all the depencencies.</li>
   <li>INIpay50 SDK which can be obtained from your business contact at Inicis.</li>
 </ul>
 
 <h2 id="installation">Installation</h2>
 
-<pre><code>$ git clone [repo] INICLI
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone [repo] INICLI
 $ cd INICLI
 $ mv ~/Download/INIpay50 vendor
 </code></pre>
+</div>
 
 <h2 id="usage">Usage</h2>
 
-<pre><code>$ `which php` /path/to/inicli --command=[prepare|chkfake|securepay|cancel] --mid=[your mid] --admin=[your key password] --params='[parameters in JSON format]'
+<div class="highlighter-rouge"><pre class="highlight"><code>$ `which php` /path/to/inicli --command=[prepare|chkfake|securepay|cancel] --mid=[your mid] --admin=[your key password] --params='[parameters in JSON format]'
 
 $ `which php` /path/to/inicli --command=prepare --mid=[your mid] --admin=[your key password] --params='"price": "1000", "orderNumber": "#{ORDER_NUMBER}"' // prepare command Sample
 </code></pre>
+</div>
 
-<p>To avoid copyright issues INICLI doesn’t include INIpay50. You first have to copy INIpay50 under <code>vendor</code> directory as it is so you can find INILib.php under <code>vendor/INIpay50/libs</code>. Otherwise you need to modify source code to set <code>INIFactory::$INIPAY_ROOT</code> on your own.</p>
+<p>To avoid copyright issues INICLI doesn’t include INIpay50. You first have to copy INIpay50 under <code class="highlighter-rouge">vendor</code> directory as it is so you can find INILib.php under <code class="highlighter-rouge">vendor/INIpay50/libs</code>. Otherwise you need to modify source code to set <code class="highlighter-rouge">INIFactory::$INIPAY_ROOT</code> on your own.</p>
 
 <h2 id="todo">TODO</h2>
 <ul>

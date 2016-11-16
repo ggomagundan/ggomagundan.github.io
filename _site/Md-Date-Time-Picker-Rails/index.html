@@ -61,36 +61,41 @@ source: https://github.com/PuranjayJain/md-date-time-picker</p>
 
 <p>Add this line to your application’s Gemfile:</p>
 
-<pre><code class="language-ruby">gem 'md-date-time-picker-rails'
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'md-date-time-picker-rails'</span>
 </code></pre>
+</div>
 
 <p>And then execute:</p>
 
-<pre><code>$ bundle
+<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle
 </code></pre>
+</div>
 
 <p>Or install it yourself as:</p>
 
-<pre><code>$ gem install md-date-time-picker-rails
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install md-date-time-picker-rails
 </code></pre>
+</div>
 
-<p>Now you need to edit your <code>app/assets/javascripts/application.js</code> file
-and add the following line:
-<code>javascript
-//= require moment.min
-//= require moment.locales# if using another locale 
-//= require draggabilly.pkgd.min # If using TimeDialog
-//= require mdDateTimePicker
-</code></p>
-
-<p>And you need to edit your <code>app/assets/stylesheets/application.css</code> file
+<p>Now you need to edit your <code class="highlighter-rouge">app/assets/javascripts/application.js</code> file
 and add the following line:</p>
 
-<pre><code class="language-css">*= require mdDateTimePicker
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">//= require moment.min</span>
+<span class="c1">//= require moment.locales# if using another locale </span>
+<span class="c1">//= require draggabilly.pkgd.min # If using TimeDialog</span>
+<span class="c1">//= require mdDateTimePicker</span>
 </code></pre>
+</div>
 
-<p>If Use <code>app/assets/stylesheets/application.scss</code> file
-<code>scss
+<p>And you need to edit your <code class="highlighter-rouge">app/assets/stylesheets/application.css</code> file
+and add the following line:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">*=</span> <span class="nt">require</span> <span class="nt">mdDateTimePicker</span>
+</code></pre>
+</div>
+
+<p>If Use <code class="highlighter-rouge">app/assets/stylesheets/application.scss</code> file
+<code class="highlighter-rouge">scss
 @import "mdDateTimePicker";
 </code></p>
 
@@ -101,66 +106,70 @@ and add the following line:</p>
 
 <p>This Gem progressively support all Themes</p>
 
-<p>If you apply theme, you need to edit your <code>app/assets/stylesheets/application.scss</code> or <code>app/assets/stylesheets/application.scss</code> file
+<p>If you apply theme, you need to edit your <code class="highlighter-rouge">app/assets/stylesheets/application.scss</code> or <code class="highlighter-rouge">app/assets/stylesheets/application.scss</code> file
 and change the following line:</p>
 
-<pre><code class="language-css"># app/assets/stylesheets/application.css
-*= require themes/dark/amber/mdDateTimePicker
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="err">#</span> <span class="nt">app</span><span class="o">/</span><span class="nt">assets</span><span class="o">/</span><span class="nt">stylesheets</span><span class="o">/</span><span class="nt">application</span><span class="nc">.css</span>
+<span class="o">*=</span> <span class="nt">require</span> <span class="nt">themes</span><span class="o">/</span><span class="nt">dark</span><span class="o">/</span><span class="nt">amber</span><span class="o">/</span><span class="nt">mdDateTimePicker</span>
 </code></pre>
+</div>
 
-<pre><code class="language-scss"># app/assets/stylesheets/application.scss
-@import "themes/dark/amber/mdDateTimePicker";
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nn">#</span> <span class="nt">app</span><span class="o">/</span><span class="nt">assets</span><span class="o">/</span><span class="nt">stylesheets</span><span class="o">/</span><span class="nt">application</span><span class="nc">.scss</span>
+<span class="o">@</span><span class="nt">import</span> <span class="s2">"themes/dark/amber/mdDateTimePicker"</span><span class="p">;</span>
 </code></pre>
+</div>
 
 <p>Currently,  Support Theme List</p>
 
 <ul>
-  <li><code>themes/dark/amber</code>, <code>themes/dark/blue</code>, <code>themes/dark/blue-grey</code>, <code>themes/dark/cyan</code>, <code>themes/dark/deep-orange</code>, <code>themes/dark/deep-purple</code>, <code>themes/dark/green</code>, <code>themes/dark/grey</code>,<code>themes/dark/indigo</code>, <code>themes/dark/light-blue</code>, <code>themes/dark/light-green</code>, <code>themes/dark/lime</code>, <code>themes/dark/orange</code>, <code>themes/dark/pink</code>, <code>themes/dark/purple</code>, <code>themes/dark/red</code>, <code>themes/dark/teal</code>, <code>themes/dark/yellow</code></li>
-  <li><code>themes/light/amber</code>, <code>themes/light/blue</code>, <code>themes/light/blue-grey</code>, <code>themes/light/cyan</code>, <code>themes/light/deep-orange</code>, <code>themes/light/deep-purple</code>, <code>themes/light/green</code>, <code>themes/light/grey</code>,<code>themes/light/indigo</code>, <code>themes/light/light-blue</code>, <code>themes/light/light-green</code>, <code>themes/light/lime</code>, <code>themes/light/orange</code>, <code>themes/light/pink</code>, <code>themes/light/purple</code>, <code>themes/light/red</code>, <code>themes/light/teal</code>, <code>themes/light/yellow</code></li>
+  <li><code class="highlighter-rouge">themes/dark/amber</code>, <code class="highlighter-rouge">themes/dark/blue</code>, <code class="highlighter-rouge">themes/dark/blue-grey</code>, <code class="highlighter-rouge">themes/dark/cyan</code>, <code class="highlighter-rouge">themes/dark/deep-orange</code>, <code class="highlighter-rouge">themes/dark/deep-purple</code>, <code class="highlighter-rouge">themes/dark/green</code>, <code class="highlighter-rouge">themes/dark/grey</code>,<code class="highlighter-rouge">themes/dark/indigo</code>, <code class="highlighter-rouge">themes/dark/light-blue</code>, <code class="highlighter-rouge">themes/dark/light-green</code>, <code class="highlighter-rouge">themes/dark/lime</code>, <code class="highlighter-rouge">themes/dark/orange</code>, <code class="highlighter-rouge">themes/dark/pink</code>, <code class="highlighter-rouge">themes/dark/purple</code>, <code class="highlighter-rouge">themes/dark/red</code>, <code class="highlighter-rouge">themes/dark/teal</code>, <code class="highlighter-rouge">themes/dark/yellow</code></li>
+  <li><code class="highlighter-rouge">themes/light/amber</code>, <code class="highlighter-rouge">themes/light/blue</code>, <code class="highlighter-rouge">themes/light/blue-grey</code>, <code class="highlighter-rouge">themes/light/cyan</code>, <code class="highlighter-rouge">themes/light/deep-orange</code>, <code class="highlighter-rouge">themes/light/deep-purple</code>, <code class="highlighter-rouge">themes/light/green</code>, <code class="highlighter-rouge">themes/light/grey</code>,<code class="highlighter-rouge">themes/light/indigo</code>, <code class="highlighter-rouge">themes/light/light-blue</code>, <code class="highlighter-rouge">themes/light/light-green</code>, <code class="highlighter-rouge">themes/light/lime</code>, <code class="highlighter-rouge">themes/light/orange</code>, <code class="highlighter-rouge">themes/light/pink</code>, <code class="highlighter-rouge">themes/light/purple</code>, <code class="highlighter-rouge">themes/light/red</code>, <code class="highlighter-rouge">themes/light/teal</code>, <code class="highlighter-rouge">themes/light/yellow</code></li>
 </ul>
 
 <h2 id="usage">Usage</h2>
 
 <p>Here is the example working code to test with your Rails application.</p>
 
-<p>Add this sample code to your <code>app/assets/javascripts/application.js</code>
+<p>Add this sample code to your <code class="highlighter-rouge">app/assets/javascripts/application.js</code>
 file</p>
 
-<pre><code class="language-javascript">$(document).ready(function(){
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
 
- toggleButton = document.getElementById("OBJECT_ID");
- dialog = new mdDateTimePicker["default"]({
-   type: 'date',
-   type: 'time',                      # If you wanna TIME
-   future: moment().add(1, 'years'),  # Optional
-   trigger: toggleButton              # Optional
- });
- toggleButton.addEventListener("click", function() {
-    return dialog.toggle();
-  });
-  toggleButton.addEventListener("onOk", function(e) {
-    return this.value = dialog.time().format('L');
-  });
+ <span class="nx">toggleButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"OBJECT_ID"</span><span class="p">);</span>
+ <span class="nx">dialog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mdDateTimePicker</span><span class="p">[</span><span class="s2">"default"</span><span class="p">]({</span>
+   <span class="na">type</span><span class="p">:</span> <span class="s1">'date'</span><span class="p">,</span>
+   <span class="na">type</span><span class="p">:</span> <span class="s1">'time'</span><span class="p">,</span>                      <span class="err">#</span> <span class="nx">If</span> <span class="nx">you</span> <span class="nx">wanna</span> <span class="nx">TIME</span>
+   <span class="na">future</span><span class="p">:</span> <span class="nx">moment</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'years'</span><span class="p">),</span>  <span class="err">#</span> <span class="nx">Optional</span>
+   <span class="na">trigger</span><span class="p">:</span> <span class="nx">toggleButton</span>              <span class="err">#</span> <span class="nx">Optional</span>
+ <span class="p">});</span>
+ <span class="nx">toggleButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">dialog</span><span class="p">.</span><span class="nx">toggle</span><span class="p">();</span>
+  <span class="p">});</span>
+  <span class="nx">toggleButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"onOk"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">dialog</span><span class="p">.</span><span class="nx">time</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="s1">'L'</span><span class="p">);</span>
+  <span class="p">});</span>
 
-});
+<span class="p">});</span>
 </code></pre>
+</div>
 
-<p>If use <code>app/assets/javascript/application.coffee</code></p>
+<p>If use <code class="highlighter-rouge">app/assets/javascript/application.coffee</code></p>
 
-<pre><code class="language-coffee">
-  toggleButton = document.getElementById("OBJECT_ID")
-  dialog = new mdDateTimePicker.default(
-    type: 'date',
-    future: moment().add(1, 'years'),
-    trigger: toggleButton
-  )
+<div class="highlighter-rouge"><pre class="highlight"><code>
+  <span class="nx">toggleButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="na">getElementById</span><span class="p">(</span><span class="s">"OBJECT_ID"</span><span class="p">)</span>
+  <span class="nx">dialog</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mdDateTimePicker</span><span class="p">.</span><span class="na">default</span><span class="p">(</span>
+    <span class="na">type</span><span class="o">:</span> <span class="s">'date'</span><span class="p">,</span>
+    <span class="na">future</span><span class="o">:</span> <span class="nx">moment</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'years'</span><span class="p">),</span>
+    <span class="na">trigger</span><span class="o">:</span> <span class="nx">toggleButton</span>
+  <span class="p">)</span>
 
-  toggleButton.addEventListener "click", -&gt;
-    dialog.toggle()
-  toggleButton.addEventListener "onOk", (e) -&gt;
-    this.value = dialog.time.format('L')
+  <span class="nx">toggleButton</span><span class="p">.</span><span class="na">addEventListener</span> <span class="s">"click"</span><span class="p">,</span> <span class="o">-&gt;</span>
+    <span class="nx">dialog</span><span class="p">.</span><span class="na">toggle</span><span class="p">()</span>
+  <span class="nx">toggleButton</span><span class="p">.</span><span class="na">addEventListener</span> <span class="s">"onOk"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="nx">dialog</span><span class="p">.</span><span class="na">time</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">'L'</span><span class="p">)</span>
 
 </code></pre>
+</div>
 
 <h2 id="full-documentation">Full documentation</h2>
 
@@ -177,9 +186,9 @@ https://puranjayjain.github.io/md-date-time-picker</p>
 
 <ol>
   <li>Fork it</li>
-  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
-  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
   <li>Create new Pull Request</li>
 </ol>
 

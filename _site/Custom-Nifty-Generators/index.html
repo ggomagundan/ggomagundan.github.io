@@ -46,7 +46,7 @@
 
 
   <div class="entry">
-    <p>Custom Nifty Generators using <code>lib</code> Directory</p>
+    <p>Custom Nifty Generators using <code class="highlighter-rouge">lib</code> Directory</p>
 
 <h2 id="import-gem-list">Import Gem List</h2>
 
@@ -60,8 +60,9 @@
 
 <h2 id="additional">Additional</h2>
 
-<pre><code>config/initializers/utf8mb4.rb # For Conflict Encoding
+<div class="highlighter-rouge"><pre class="highlight"><code>config/initializers/utf8mb4.rb # For Conflict Encoding
 </code></pre>
+</div>
 
 <ul>
   <li><a href="https://github.com/rails/rails/issues/9855">MySQL UTF8MB4 breaks ActiveRecord</a></li>
@@ -69,28 +70,32 @@
 
 <h2 id="preparation">Preparation</h2>
 
-<pre><code>$ cp config/database.yml.sample config/database.yml # if Use mysql
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cp config/database.yml.sample config/database.yml # if Use mysql
 </code></pre>
+</div>
 
 <h2 id="file-list">File List</h2>
 
 <h4 id="action-on-controller">Action On Controller</h4>
-<pre><code>lib/templates/nifty/scaffold/actions/*.rb 
+<div class="highlighter-rouge"><pre class="highlight"><code>lib/templates/nifty/scaffold/actions/*.rb 
 
 # Alwalys redirect to index path
 </code></pre>
+</div>
 
 <h4 id="controller-file">Controller File</h4>
-<pre><code>lib/templates/nifty/scaffold/controller.rb
+<div class="highlighter-rouge"><pre class="highlight"><code>lib/templates/nifty/scaffold/controller.rb
 
 # Support `Strong Parameter` 
 </code></pre>
+</div>
 
 <h4 id="view-file">View File</h4>
-<pre><code>lib/templates/nifty/scaffold/views/erb/*.html.erb
+<div class="highlighter-rouge"><pre class="highlight"><code>lib/templates/nifty/scaffold/views/erb/*.html.erb
 
 # Design bootstrap
 </code></pre>
+</div>
 
 <h2 id="full-documentation">Full documentation</h2>
 
@@ -100,9 +105,9 @@
 
 <ol>
   <li>Fork it</li>
-  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
-  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
   <li>Create new Pull Request</li>
 </ol>
 

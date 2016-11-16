@@ -37,10 +37,11 @@ And ``Bootstrap4``, ``mysql``, ``redis``
 You must change `config/environments/development.rb ` File
 
 links : https://github.com/rails/rails/blob/61a7239e405982e78de15bd86583514248e6f525/actioncable/lib/action_cable/engine.rb#L25   
+
 ```ruby
-config.action_cable.url = "ws://localhost:3006/cable"
-config.action_cable.allowed_request_origins  = "http://localhost:3006"
-# My Proejct running on 3006 port
+    config.action_cable.url = "ws://localhost:3006/cable"
+    config.action_cable.allowed_request_origins  = "http://localhost:3006"
+    # My Proejct running on 3006 port
 
 ```
 

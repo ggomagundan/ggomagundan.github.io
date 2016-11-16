@@ -50,116 +50,124 @@
 
 <h2 id="files">Files</h2>
 
-<p>config.ru
-```ruby 
-# Add This Lines
-require “tus/server”</p>
+<p>config.ru</p>
 
-<p>map “/files” do
-  run Tus::Server
-end
-```</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>    <span class="c1"># Add This Lines</span>
+    <span class="nb">require</span> <span class="s2">"tus/server"</span>
 
-<p>config/initializers/shrine.rb
-```ruby
-require “shrine”
-require “shrine/storage/file_system”
-require “shrine/storage/url”</p>
-
-<p>Shrine.storages = {</p>
-
-<p>cache: Shrine::Storage::Url.new, # temporary
-  store: Shrine::Storage::FileSystem.new(“public”, prefix: “upload_files/store” ), # permanent
-}</p>
-
-<p>Shrine.plugin :activerecord
-Shrine.plugin :cached_attachment_data # for forms
-Shrine.plugin :logging, logger: Rails.logger
-Shrine.plugin :rack_file
-```</p>
-
-<p>app/uploder/image_uploader.rb
-```ruby
-class ImageUploader  &lt; Shrine</p>
-
-<pre><code>plugin :determine_mime_type
-plugin :restore_cached_data
-plugin :validation_helpers
-
-Attacher.validate do
-  validate_max_size 5.megabytes, message: 'is too large (max is 5 MB)'
-  validate_mime_type_inclusion ['image/jpeg', 'image/png', 'image/gif']
-end
+    <span class="n">map</span> <span class="s2">"/files"</span> <span class="k">do</span>
+      <span class="n">run</span> <span class="no">Tus</span><span class="o">::</span><span class="no">Server</span>
+    <span class="k">end</span>
 </code></pre>
+</div>
 
-<p>end
-```</p>
+<p>config/initializers/shrine.rb</p>
 
-<p>app/models/album.rb
-<code>ruby
-class Album &lt; ApplicationRecord
-  include ImageUploader[:image]
-end
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>    <span class="nb">require</span> <span class="s2">"shrine"</span>
+    <span class="nb">require</span> <span class="s2">"shrine/storage/file_system"</span>
+    <span class="nb">require</span> <span class="s2">"shrine/storage/url"</span>
 
-<p>app/assets/javascripts/application.js
-```javascript</p>
+    <span class="no">Shrine</span><span class="p">.</span><span class="nf">storages</span> <span class="o">=</span> <span class="p">{</span>
 
-<p>//= require jquery
-//= require jquery_ujs
-// require turbolinks # turbolinks sometime occured bugs. Then disabled
-turbolinks
-//= require tus</p>
+      <span class="ss">cache: </span><span class="no">Shrine</span><span class="o">::</span><span class="no">Storage</span><span class="o">::</span><span class="no">Url</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span> <span class="c1"># temporary</span>
+      <span class="ss">store: </span><span class="no">Shrine</span><span class="o">::</span><span class="no">Storage</span><span class="o">::</span><span class="no">FileSystem</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"public"</span><span class="p">,</span> <span class="ss">prefix: </span><span class="s2">"upload_files/store"</span> <span class="p">),</span> <span class="c1"># permanent</span>
+    <span class="p">}</span>
 
-<p>jQuery(function() {
- $(“input[type=file]”).on(“change”, function(e) {
-    var file = e.target.files[0];
-    var fileField = $(e.target)</p>
-
-<pre><code>fileField.val("");
-
-var upload = new tus.Upload(file, {
-  endpoint: "http://localhost:3006/files",.
-  metadata: {filename: file.name, content_type: file.type},
-  onError: function(error) {
-    alert(error);
-  },
-  onProgress: function(bytesSent, bytesTotal) {
-    var progress = parseInt(bytesSent / bytesTotal * 100, 10);
-    var percentage = progress.toString() + '%';
-    progressBar.find(".progress-bar").css("width", percentage).html(percentage);
-  },
-  onSuccess: function(result) {
-    progressBar.remove();
-
-    var file = {
-      storage: "cache",
-      id: upload.url,
-      metadata: {
-        filename:  upload.file.name.match(/[^\/\\]+$/)[0], // IE returns full path
-        size:      upload.file.size,
-        mime_type: upload.file.type,
-      }
-    }
-
-    fileField.prev().val(JSON.stringify(file));
-    fileField.after($('&lt;p&gt; &lt;img src="' + upload.url + '"&gt;&lt;/img&gt;&lt;/p&gt;'));
-  }
-});
-
-var progressBar = $('&lt;div class="progress" style="width: 300px"&gt;&lt;div class="progress-bar"&gt;&lt;/div&gt;&lt;/div&gt;').insertBefore(e.target);
-
-upload.start(); }) }); ```
+    <span class="no">Shrine</span><span class="p">.</span><span class="nf">plugin</span> <span class="ss">:activerecord</span>
+    <span class="no">Shrine</span><span class="p">.</span><span class="nf">plugin</span> <span class="ss">:cached_attachment_data</span> <span class="c1"># for forms</span>
+    <span class="no">Shrine</span><span class="p">.</span><span class="nf">plugin</span> <span class="ss">:logging</span><span class="p">,</span> <span class="ss">logger: </span><span class="no">Rails</span><span class="p">.</span><span class="nf">logger</span>
+    <span class="no">Shrine</span><span class="p">.</span><span class="nf">plugin</span> <span class="ss">:rack_file</span>
 </code></pre>
+</div>
+
+<p>app/uploder/image_uploader.rb</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">ImageUploader</span>  <span class="o">&lt;</span> <span class="no">Shrine</span>
+
+      <span class="n">plugin</span> <span class="ss">:determine_mime_type</span>
+      <span class="n">plugin</span> <span class="ss">:restore_cached_data</span>
+      <span class="n">plugin</span> <span class="ss">:validation_helpers</span>
+
+      <span class="no">Attacher</span><span class="p">.</span><span class="nf">validate</span> <span class="k">do</span>
+        <span class="n">validate_max_size</span> <span class="mi">5</span><span class="p">.</span><span class="nf">megabytes</span><span class="p">,</span> <span class="ss">message: </span><span class="s1">'is too large (max is 5 MB)'</span>
+        <span class="n">validate_mime_type_inclusion</span> <span class="p">[</span><span class="s1">'image/jpeg'</span><span class="p">,</span> <span class="s1">'image/png'</span><span class="p">,</span> <span class="s1">'image/gif'</span><span class="p">]</span>
+      <span class="k">end</span>
+
+  <span class="k">end</span>
+</code></pre>
+</div>
+
+<p>app/models/album.rb</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">Album</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+    <span class="kp">include</span> <span class="no">ImageUploader</span><span class="p">[</span><span class="ss">:image</span><span class="p">]</span>
+  <span class="k">end</span>
+</code></pre>
+</div>
+
+<p>app/assets/javascripts/application.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+  <span class="c1">//= require jquery</span>
+  <span class="c1">//= require jquery_ujs</span>
+  <span class="c1">// require turbolinks # turbolinks sometime occured bugs. Then disabled</span>
+  <span class="nx">turbolinks</span>
+  <span class="c1">//= require tus</span>
+
+
+  <span class="nx">jQuery</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nx">$</span><span class="p">(</span><span class="s2">"input[type=file]"</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">"change"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+      <span class="kd">var</span> <span class="nx">fileField</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">)</span>
+
+      <span class="nx">fileField</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+
+      <span class="kd">var</span> <span class="nx">upload</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">tus</span><span class="p">.</span><span class="nx">Upload</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">endpoint</span><span class="p">:</span> <span class="s2">"http://localhost:3006/files"</span><span class="p">,.</span>
+        <span class="na">metadata</span><span class="p">:</span> <span class="p">{</span><span class="na">filename</span><span class="p">:</span> <span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="na">content_type</span><span class="p">:</span> <span class="nx">file</span><span class="p">.</span><span class="nx">type</span><span class="p">},</span>
+        <span class="na">onError</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">alert</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="na">onProgress</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bytesSent</span><span class="p">,</span> <span class="nx">bytesTotal</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">progress</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">bytesSent</span> <span class="o">/</span> <span class="nx">bytesTotal</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+          <span class="kd">var</span> <span class="nx">percentage</span> <span class="o">=</span> <span class="nx">progress</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s1">'%'</span><span class="p">;</span>
+          <span class="nx">progressBar</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">".progress-bar"</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"width"</span><span class="p">,</span> <span class="nx">percentage</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">percentage</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="na">onSuccess</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">progressBar</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+
+          <span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">storage</span><span class="p">:</span> <span class="s2">"cache"</span><span class="p">,</span>
+            <span class="na">id</span><span class="p">:</span> <span class="nx">upload</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span>
+            <span class="na">metadata</span><span class="p">:</span> <span class="p">{</span>
+              <span class="na">filename</span><span class="p">:</span>  <span class="nx">upload</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/</span><span class="se">[^\/\\]</span><span class="sr">+$/</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="c1">// IE returns full path</span>
+              <span class="na">size</span><span class="p">:</span>      <span class="nx">upload</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">size</span><span class="p">,</span>
+              <span class="na">mime_type</span><span class="p">:</span> <span class="nx">upload</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">type</span><span class="p">,</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+
+          <span class="nx">fileField</span><span class="p">.</span><span class="nx">prev</span><span class="p">().</span><span class="nx">val</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">file</span><span class="p">));</span>
+          <span class="nx">fileField</span><span class="p">.</span><span class="nx">after</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;p&gt; &lt;img src="'</span> <span class="o">+</span> <span class="nx">upload</span><span class="p">.</span><span class="nx">url</span> <span class="o">+</span> <span class="s1">'"&gt;&lt;/img&gt;&lt;/p&gt;'</span><span class="p">));</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+
+      <span class="kd">var</span> <span class="nx">progressBar</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'&lt;div class="progress" style="width: 300px"&gt;&lt;div class="progress-bar"&gt;&lt;/div&gt;&lt;/div&gt;'</span><span class="p">).</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">);</span>
+
+      <span class="nx">upload</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+  <span class="p">})</span>
+  <span class="p">});</span>
+</code></pre>
+</div>
 
 <h2 id="usage">Usage</h2>
 
 <p>This sample Running server on 3006 port.</p>
 
-<p>If you wanna another port, change <code>application.js</code>  file Line 27</p>
+<p>If you wanna another port, change <code class="highlighter-rouge">application.js</code>  file Line 27</p>
 
-<pre><code>$ rails s -p3006
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rails s -p3006
 </code></pre>
+</div>
 
 <p>Thanks to Help <a href="https://github.com/janko-m">janko-m</a></p>
 
@@ -167,9 +175,9 @@ upload.start(); }) }); ```
 
 <ol>
   <li>Fork it</li>
-  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
-  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
   <li>Create new Pull Request</li>
 </ol>
 

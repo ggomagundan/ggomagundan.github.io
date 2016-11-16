@@ -60,33 +60,37 @@ library(using 2.2 Version) for your Rails 4, 5 application.</p>
 
 <p>Add this line to your application’s Gemfile:</p>
 
-<pre><code class="language-ruby">gem 'clipboard-toastr-rails'
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'clipboard-toastr-rails'</span>
 </code></pre>
+</div>
 
 <p>And then execute:</p>
 
-<pre><code>$ bundle
+<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle
 </code></pre>
+</div>
 
 <p>Or install it yourself as:</p>
 
-<pre><code>$ gem install clipboard-toastr-rails
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install clipboard-toastr-rails
 </code></pre>
+</div>
 
-<p>Now you need to edit your <code>app/assets/javascripts/application.js</code> file
+<p>Now you need to edit your <code class="highlighter-rouge">app/assets/javascripts/application.js</code> file
 and add the following line:
-<code>javascript
+<code class="highlighter-rouge">javascript
 //= require clipboard-toastr
 </code></p>
 
-<p>And you need to edit your <code>app/assets/stylesheets/application.css</code> file
+<p>And you need to edit your <code class="highlighter-rouge">app/assets/stylesheets/application.css</code> file
 and add the following line:</p>
 
-<pre><code class="language-css">*= require toastr
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">*=</span> <span class="nt">require</span> <span class="nt">toastr</span>
 </code></pre>
+</div>
 
-<p>If Use <code>app/assets/stylesheets/application.scss</code> file
-<code>scss
+<p>If Use <code class="highlighter-rouge">app/assets/stylesheets/application.scss</code> file
+<code class="highlighter-rouge">scss
 @import "toastr";
 </code></p>
 
@@ -94,51 +98,55 @@ and add the following line:</p>
 
 <p>Here is the example working code to test with your Rails application.</p>
 
-<p>Add this sample code to your <code>app/assets/javascripts/application.js</code>
+<p>Add this sample code to your <code class="highlighter-rouge">app/assets/javascripts/application.js</code>
 file</p>
 
-<pre><code class="language-javascript">$(document).ready(function(){
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
 
-  clip = new Clipboard('.copy-target')
+  <span class="nx">clip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Clipboard</span><span class="p">(</span><span class="s1">'.copy-target'</span><span class="p">)</span>
 
-  toastr.options = {
-    "positionClass": "toast-bottom-center",
-    ....
-    ....
-  }
+  <span class="nx">toastr</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"positionClass"</span><span class="p">:</span> <span class="s2">"toast-bottom-center"</span><span class="p">,</span>
+    <span class="p">....</span>
+    <span class="p">....</span>
+  <span class="p">}</span>
 
-  $(".copy-target").click -&gt;
-    toastr.info "Copy Success Alert"
+  <span class="nx">$</span><span class="p">(</span><span class="s2">".copy-target"</span><span class="p">).</span><span class="nx">click</span> <span class="o">-&gt;</span>
+    <span class="nx">toastr</span><span class="p">.</span><span class="nx">info</span> <span class="s2">"Copy Success Alert"</span>
 
 
-});
+<span class="p">});</span>
 </code></pre>
+</div>
 
-<pre><code class="language-html">
-&lt;html&gt;
-  &lt;head&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
   ...
-  &lt;/head&gt;
+  <span class="nt">&lt;/head&gt;</span>
 
-  &lt;body&gt;
+  <span class="nt">&lt;body&gt;</span>
     ...
     ...
 
-    &lt;span class="copy-target" data-clipboard-text="COPY CONTENT"&gt;Copy Link&lt;/span&gt;
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"copy-target"</span> <span class="na">data-clipboard-text=</span><span class="s">"COPY CONTENT"</span><span class="nt">&gt;</span>Copy Link<span class="nt">&lt;/span&gt;</span>
 
     ...
     ...
-  &lt;/body&gt;
+  <span class="nt">&lt;/body&gt;</span>
 
-&lt;/html&gt;
+<span class="nt">&lt;/html&gt;</span>
 
 </code></pre>
+</div>
 
 <h2 id="full-documentation">Full documentation</h2>
 
-<p>The Documentation is at
-<a href="https://clipboardjs.com/">Clipboard.js Document</a>
-<a href="http://codeseven.github.io/toastr/">Toastr Document</a></p>
+<p>The Documentation is at</p>
+
+<p><a href="https://clipboardjs.com/">Clipboard.js Document</a></p>
+
+<p><a href="http://codeseven.github.io/toastr/">Toastr Document</a></p>
 
 <h2 id="change-log">Change Log</h2>
 
@@ -150,9 +158,9 @@ file</p>
 
 <ol>
   <li>Fork it</li>
-  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
-  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
   <li>Create new Pull Request</li>
 </ol>
 

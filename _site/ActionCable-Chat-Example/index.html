@@ -48,7 +48,7 @@
   <div class="entry">
     <p>Simple Chat Example using Rails5 ActionCable .</p>
 
-<p>And <code>Bootstrap4</code>, <code>mysql</code>, <code>redis</code></p>
+<p>And <code class="highlighter-rouge">Bootstrap4</code>, <code class="highlighter-rouge">mysql</code>, <code class="highlighter-rouge">redis</code></p>
 
 <h2 id="files">Files</h2>
 
@@ -71,30 +71,32 @@
 
 <h2 id="usage">Usage</h2>
 
-<p>You must change <code>config/environments/development.rb </code> File</p>
+<p>You must change <code class="highlighter-rouge">config/environments/development.rb </code> File</p>
 
-<p>links : https://github.com/rails/rails/blob/61a7239e405982e78de15bd86583514248e6f525/actioncable/lib/action_cable/engine.rb#L25 <br />
-```ruby
-config.action_cable.url = “ws://localhost:3006/cable”
-config.action_cable.allowed_request_origins  = “http://localhost:3006”
-# My Proejct running on 3006 port</p>
+<p>links : https://github.com/rails/rails/blob/61a7239e405982e78de15bd86583514248e6f525/actioncable/lib/action_cable/engine.rb#L25</p>
 
-<p>```</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>    <span class="n">config</span><span class="p">.</span><span class="nf">action_cable</span><span class="p">.</span><span class="nf">url</span> <span class="o">=</span> <span class="s2">"ws://localhost:3006/cable"</span>
+    <span class="n">config</span><span class="p">.</span><span class="nf">action_cable</span><span class="p">.</span><span class="nf">allowed_request_origins</span>  <span class="o">=</span> <span class="s2">"http://localhost:3006"</span>
+    <span class="c1"># My Proejct running on 3006 port</span>
 
-<p>If you not use mysql, change to <code>Gemfile</code></p>
+</code></pre>
+</div>
 
-<pre><code>$ rails db:migrate
+<p>If you not use mysql, change to <code class="highlighter-rouge">Gemfile</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rails db:migrate
 $ rails db:seed
 $ rails s [-p Port]
 </code></pre>
+</div>
 
 <h2 id="contributing">Contributing</h2>
 
 <ol>
   <li>Fork it</li>
-  <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
-  <li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
-  <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
   <li>Create new Pull Request</li>
 </ol>
 
