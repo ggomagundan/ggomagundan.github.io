@@ -7,6 +7,111 @@
     <atom:link href="http://ggomagundan.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Gentelella-On-Rails</title>
+        <description>&lt;hr /&gt;
+&lt;p&gt;Rails 5 implementation of the awesome &lt;a href=&quot;https://github.com/puikinsh/gentelella&quot;&gt;Gentelella&lt;/a&gt; Bootstrap admin template.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ruby 2.3.0&lt;/li&gt;
+  &lt;li&gt;Gentelella 1.3.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Setup:
+ 1. Clone this repo :  git clone
+    https://github.com/iogbole/gentelella_on_rails.git&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;cd gentelella_on_rails&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;npm install -g bower&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;bower install&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;bundle install&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;rails s&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s it!&lt;/p&gt;
+
+&lt;p&gt;Navigate to   http://localhost:3000&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/2548160/16155032/63da00fa-34a5-11e6-917e-f7a616d7bd50.png&quot; alt=&quot;gentelella on rails &quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;If you’re using devise, you’d need to create another layout to handle authentication and sign_ups as discussed in &lt;a href=&quot;https://github.com/iogbole/gentelella_on_rails/issues/2&quot;&gt;issue #2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is the &lt;a href=&quot;https://gist.github.com/iogbole/a2f1ddf330cb5194967a1996369619e8&quot;&gt;login template&lt;/a&gt;. And this is what it looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cloud.githubusercontent.com/assets/2548160/14933076/fb9724d2-0e7a-11e6-8e3a-26c352576d07.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;I committed the vendor files to this repo so you may skip step 3 and 4&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Contributing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the spirit of &lt;a href=&quot;http://www.fsf.org/licensing/essays/free-sw.html&quot;&gt;free software&lt;/a&gt;, everyone is encouraged to help improve this project. Here are a few ways you can pitch in:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Report bugs or issues&lt;/li&gt;
+  &lt;li&gt;Fix bugs and submit pull requests.&lt;/li&gt;
+  &lt;li&gt;Write, clarify or fix documentation.&lt;/li&gt;
+  &lt;li&gt;Refactor code.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 07 Dec 2016 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Gentelella_On_Rails/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Gentelella_On_Rails/</guid>
+      </item>
+    
+      <item>
+        <title>Torrent-Parse</title>
+        <description>&lt;p&gt;&lt;a href=&quot;LICENSE&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/license-MIT-blue.svg&quot; alt=&quot;LICENSE&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Parsing TorrentFile with &lt;a href=&quot;https://github.com/Geal/nom&quot;&gt;nom&lt;/a&gt; and
+&lt;a href=&quot;https://github.com/jag426/bittorrent&quot;&gt;jag426/bittorrent&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main.rs&lt;/code&gt; and edit FileName( Line 237 )&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;parse_torrentfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TORRENT_FILE_NAME&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;cargo run
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Fork it&lt;/li&gt;
+  &lt;li&gt;Create your feature branch (&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Commit your changes (&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -am &#39;Added some feature&#39;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Push to the branch (&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Create new Pull Request&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;The gem is available as open source under the terms of the &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;MIT
+License&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 23 Nov 2016 00:00:00 +0900</pubDate>
+        <link>http://ggomagundan.github.io/Torrent-Parser/</link>
+        <guid isPermaLink="true">http://ggomagundan.github.io/Torrent-Parser/</guid>
+      </item>
+    
+      <item>
         <title>Clipboard-Toastr-Rails</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://badge.fury.io/rb/clipboard-toastr-rails&quot;&gt;&lt;img src=&quot;https://badge.fury.io/rb/clipboard-toastr-rails.svg&quot; alt=&quot;Gem
 Version&quot; /&gt;&lt;/a&gt;
@@ -656,95 +761,6 @@ $ `which php` /path/to/inicli --command=prepare --mid=[your mid] --admin=[your k
         <pubDate>Tue, 16 Jun 2015 00:00:00 +0900</pubDate>
         <link>http://ggomagundan.github.io/Spread-Here/</link>
         <guid isPermaLink="true">http://ggomagundan.github.io/Spread-Here/</guid>
-      </item>
-    
-      <item>
-        <title>Consise Logging Customize</title>
-        <description>&lt;p&gt;Concise request logging for Rails production&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/gshaw/concise_logging/raw/master/img/screenshot.png&quot; alt=&quot;screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Logs a concise single line for each request at &lt;code class=&quot;highlighter-rouge&quot;&gt;:warn&lt;/code&gt; level.  This allows
-logging requests without all the extra logging that &lt;code class=&quot;highlighter-rouge&quot;&gt;:info&lt;/code&gt; level outputs.&lt;/p&gt;
-
-&lt;p&gt;Not suitable for development but ideal for production settings where each
-request and associated parameters is logged.&lt;/p&gt;
-
-&lt;p&gt;Inspired by a &lt;a href=&quot;http://rubyjunky.com/cleaning-up-rails-4-production-logging.html&quot;&gt;blog post on RubyJunky.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Special thanks to &lt;a href=&quot;https://github.com/zohrehj&quot;&gt;Zohreh Jabbari&lt;/a&gt; for doing the
-initial coding and proof of concept.&lt;/p&gt;
-
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;concise_logging&#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;And then execute:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Or install it yourself as:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install concise_logging
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;Add this to your &lt;code class=&quot;highlighter-rouge&quot;&gt;config/production.rb&lt;/code&gt;.  Configure tagging as per your desires.
-We use tagging to indicate application with a code and 
-environment with a triple letter (e.g., pro = production, dev = development).&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Configure logger to log warn and above&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;log_level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:warn&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;log_tags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ggomagundan-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;logger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TaggedLogging&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ActiveSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;log&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.log&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If you want to try the logger in development than you have to manually add the
-middleware and attach the log subscriber by adding these lines in your
-&lt;code class=&quot;highlighter-rouge&quot;&gt;config/development.rb&lt;/code&gt; file.  These lines are not needed for production.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;middleware&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ConciseLogging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;LogMiddleware&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;ConciseLogging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;LogSubscriber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;attach_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:action_controller&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Fork it ( https://github.com/[my-github-username]/concise_logging/fork )&lt;/li&gt;
-  &lt;li&gt;Create your feature branch (&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b my-new-feature&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Commit your changes (&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -am &#39;Add some feature&#39;&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Push to the branch (&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin my-new-feature&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;Create a new Pull Request&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Mon, 16 Feb 2015 00:00:00 +0900</pubDate>
-        <link>http://ggomagundan.github.io/Concise-Logging-Customize/</link>
-        <guid isPermaLink="true">http://ggomagundan.github.io/Concise-Logging-Customize/</guid>
-      </item>
-    
-      <item>
-        <title>Shorten</title>
-        <description>&lt;p&gt;Make Shorten URL Using &lt;a href=&quot;http://en.wikipedia.org/wiki/Bijection&quot;&gt;bijective Algorithm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It is running on &lt;code class=&quot;highlighter-rouge&quot;&gt;Ruby 2.2.0&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails 4.2.0&lt;/code&gt;,&lt;/p&gt;
-
-&lt;p&gt;Reference Code : &lt;a href=&quot;https://gist.github.com/zumbojo/1073996&quot;&gt;zumbojo/bijective.rb&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 07 Feb 2015 00:00:00 +0900</pubDate>
-        <link>http://ggomagundan.github.io/Shorten/</link>
-        <guid isPermaLink="true">http://ggomagundan.github.io/Shorten/</guid>
       </item>
     
   </channel>
