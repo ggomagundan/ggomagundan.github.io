@@ -3,87 +3,87 @@
   <channel>
     <title>GGoMaGunDan</title>
     <description></description>
-    <link>http://localhost:4000</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Gentelella-On-Rails</title>
         <description>Gentelella Admin Bootstrap Template on Rails 5</description>
         <pubDate>Wed, 07 Dec 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/gentelella-on-rails</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/gentelella-on-rails</guid>
+        <link>/posts/gentelella-on-rails</link>
+        <guid isPermaLink="true">/posts/gentelella-on-rails</guid>
       </item>
     
       <item>
         <title>Torrent-Parse</title>
         <description>Parsing TorrentFile with nom and jag426/bittorrent From Rust Language</description>
         <pubDate>Wed, 23 Nov 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/torrent-parser</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/torrent-parser</guid>
+        <link>/posts/torrent-parser</link>
+        <guid isPermaLink="true">/posts/torrent-parser</guid>
       </item>
     
       <item>
         <title>Clipboard-Toastr-Rails</title>
         <description>clipboard.js and toastr javascript Gem</description>
         <pubDate>Tue, 15 Nov 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/clipboard-toastr-rails</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/clipboard-toastr-rails</guid>
+        <link>/posts/clipboard-toastr-rails</link>
+        <guid isPermaLink="true">/posts/clipboard-toastr-rails</guid>
       </item>
     
       <item>
         <title>Introducing chalk</title>
         <description>Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.</description>
         <pubDate>Mon, 17 Oct 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/introducing-chalk</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/introducing-chalk</guid>
+        <link>/posts/introducing-chalk</link>
+        <guid isPermaLink="true">/posts/introducing-chalk</guid>
       </item>
     
       <item>
         <title>How to configure Chalk</title>
         <description>Learn more about the config file for Chalk and how to set it up properly.</description>
         <pubDate>Sun, 16 Oct 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/configuring-chalk</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/configuring-chalk</guid>
+        <link>/posts/configuring-chalk</link>
+        <guid isPermaLink="true">/posts/configuring-chalk</guid>
       </item>
     
       <item>
         <title>Chalk sample post with all elements</title>
         <description>Have a look at all the predesigned elements you can use in Chalk.</description>
         <pubDate>Sat, 15 Oct 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/chalk-sample-post-with-all-elements</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/chalk-sample-post-with-all-elements</guid>
+        <link>/posts/chalk-sample-post-with-all-elements</link>
+        <guid isPermaLink="true">/posts/chalk-sample-post-with-all-elements</guid>
       </item>
     
       <item>
         <title>Rails5-ActionCable-Chat-Example</title>
         <description>Simple Chat Example Using Rails5 ActionCable</description>
         <pubDate>Fri, 30 Sep 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/actioncable-chat-example</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/actioncable-chat-example</guid>
+        <link>/posts/actioncable-chat-example</link>
+        <guid isPermaLink="true">/posts/actioncable-chat-example</guid>
       </item>
     
       <item>
         <title>Shine-Rails-Example</title>
         <description>Rails Example Using Shine Gem</description>
         <pubDate>Tue, 27 Sep 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/shrine-rails-example</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/shrine-rails-example</guid>
+        <link>/posts/shrine-rails-example</link>
+        <guid isPermaLink="true">/posts/shrine-rails-example</guid>
       </item>
     
       <item>
         <title>Custom Nifty Generators</title>
         <description>Customized NiftyGenerators</description>
         <pubDate>Tue, 06 Sep 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/custom-nifty-generators</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/custom-nifty-generators</guid>
+        <link>/posts/custom-nifty-generators</link>
+        <guid isPermaLink="true">/posts/custom-nifty-generators</guid>
       </item>
     
       <item>
         <title>Md-Date-Time-Picker-Rails</title>
         <description>Migration md-date-time-picker to rails Gem</description>
         <pubDate>Tue, 03 May 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/posts/md-date-time-picker-rails</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/md-date-time-picker-rails</guid>
+        <link>/posts/md-date-time-picker-rails</link>
+        <guid isPermaLink="true">/posts/md-date-time-picker-rails</guid>
       </item>
     
   </channel>
