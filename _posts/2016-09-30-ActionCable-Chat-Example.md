@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Rails5-ActionCable-Chat-Example
-desc: Simple Chat Example Using Rails5 ActionCable
-proj-url: https://github.com/ggomagundan/rails5-actioncable-chat-example
-proj-num: 01
+description: Simple Chat Example Using Rails5 ActionCable
+project-url: https://github.com/ggomagundan/rails5-actioncable-chat-example
+tags: [rails, ruby]
 ---
 
 

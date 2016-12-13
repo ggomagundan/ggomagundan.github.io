@@ -1,15 +1,12 @@
 ---
 layout: post
 title: Gentelella-On-Rails
-desc: Gentelella Admin Bootstrap Template on Rails 5 
-proj-url: https://github.com/ggomagundan/gentelella_on_rails
-proj-num: 01
+description: Gentelella Admin Bootstrap Template on Rails 5 
+project-url: https://github.com/ggomagundan/gentelella_on_rails
+tags: [rails, ruby, admin]
 ---
 
 
-
-
----------------------------
 Rails 5 implementation of the awesome [Gentelella](https://github.com/puikinsh/gentelella) Bootstrap admin template.
 
 - ruby 2.3.0

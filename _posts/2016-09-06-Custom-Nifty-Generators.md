@@ -1,13 +1,12 @@
 ---
 layout: post
 title: Custom Nifty Generators 
-desc: Customized NiftyGenerators
-proj-url: https://github.com/ggomagundan/custom-nifty-generators
-proj-num: 01
+description: Customized NiftyGenerators
+project-url: https://github.com/ggomagundan/custom-nifty-generators
+tags: [rails, ruby, gem]
 ---
 
 
- 
 Custom Nifty Generators using `lib` Directory
 
 ## Import Gem List

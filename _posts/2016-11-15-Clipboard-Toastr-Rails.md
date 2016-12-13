@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Clipboard-Toastr-Rails
-desc: clipboard.js and toastr javascript Gem
-proj-url: https://github.com/ggomagundan/clipboard-toastr-rails
-proj-num: 01
+description: clipboard.js and toastr javascript Gem
+project-url: https://github.com/ggomagundan/clipboard-toastr-rails
+tags: [rails, ruby, gem]
 ---
 
 

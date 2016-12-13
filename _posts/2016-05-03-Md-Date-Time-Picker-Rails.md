@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Md-Date-Time-Picker-Rails
-desc: Migration md-date-time-picker to rails Gem
-proj-url: https://github.com/ggomagundan/md-date-time-picker-rails
-proj-num: 01
+description: Migration md-date-time-picker to rails Gem
+project-url: https://github.com/ggomagundan/md-date-time-picker-rails
+tags: [rails, ruby, gem]
 ---
 
 

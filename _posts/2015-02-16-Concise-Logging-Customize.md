@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Consise Logging Customize
-desc: Consise Logging Customize Repository
-proj-url: https://github.com/ggomagundan/concise_logging
-proj-num: 02
+description: Consise Logging Customize Repository
+project-url: https://github.com/ggomagundan/concise_logging
+tags: [rails, ruby, gem]
 ---
 
 

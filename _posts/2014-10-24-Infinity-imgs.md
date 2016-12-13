@@ -1,9 +1,10 @@
 ---
 layout: post
 title: InfinityIMGs
-desc: Only Rendering IMGs
-proj-url: https://infinityimgs.com
+description: Only Rendering IMGs
+project-url: https://infinityimgs.com
 proj-num: 01
+tags: [rails, ruby]
 ---
 
 

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Shine-Rails-Example
-desc: Rails Example Using Shine Gem
-proj-url: https://github.com/ggomagundan/shrine-rails-example
-proj-num: 01
+description: Rails Example Using Shine Gem
+project-url: https://github.com/ggomagundan/shrine-rails-example
+tags: [rails, ruby] 
 ---
 
 

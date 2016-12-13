@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Torrent-Parse
-desc: Parsing TorrentFile with nom and jag426/bittorrent From Rust Language
-proj-url: https://github.com/ggomagundan/torrent_parser
-proj-num: 01
+description: Parsing TorrentFile with nom and jag426/bittorrent From Rust Language
+project-url: https://github.com/ggomagundan/torrent_parser
+tags: [rust]
 ---
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

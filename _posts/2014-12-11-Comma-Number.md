@@ -1,9 +1,9 @@
 ---
 layout: post
 title: CommaNumber
-desc: Add Comma or Remove Comma on Integer Value
-proj-url:  https://github.com/ggomagundan/commaNumber
-proj-num: 01
+description: Add Comma or Remove Comma on Integer Value
+project-url:  https://github.com/ggomagundan/commaNumber
+tags: [javascript]
 ---
 
 
