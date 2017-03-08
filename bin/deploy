@@ -7,11 +7,11 @@ set -e
 
 echo "Started deploying"
 
-# Checkout gh-pages branch.
-if [ `git branch | grep master` ]
-then
-  git branch -D master
-fi
+# Checkout mater branch.
+#if [ `git branch | grep master` ]
+#then
+#  git branch -D master
+#fi
 git checkout -b master
 
 # Build site.
