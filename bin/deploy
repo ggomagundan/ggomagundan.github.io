@@ -7,15 +7,15 @@ set -e
 
 echo "Started deploying"
 
-# Checkout mater branch.
-#if [ `git branch | grep master` ]
-#then
-#  git branch -D master
-#fi
-git checkout -b master
+# Checkout gh-pages branch.
+if [ `git branch | grep gh-pages` ]
+then
+  git branch -D gh-pages
+fi
+git checkout -b gh-pages
 
 # Build site.
-bower install
+yarn install --modules-folder ./_assets/yarn
 bundle exec jekyll build
 
 # Delete and move files.
@@ -26,11 +26,11 @@ rm -R _site/
 # Push to gh-pages.
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-git push -f -q origin master
+git push -f -q origin gh-pages
 
 # Move back to previous branch.
 git checkout -
-bower install
+yarn install --modules-folder ./_assets/yarn
 
 echo "Deployed Successfully!"
 

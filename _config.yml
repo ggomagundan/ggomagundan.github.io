@@ -2,41 +2,40 @@
 
 name: GGoMaGunDan
 paginate: 25
-paginate_path: "/posts/page/:num/"
-url: # add site url http://example.com/
+url: # add your site url (format: https://example.com/)
 blog_theme: dark # Or use dark
 
 # Optional settings
 
-discus_identifier: ggomagundan-github
-ga_analytics: UA-88917213-1
-rss_enabled: true # Change to false if not
 about_enabled: false # Change to true if you wish to show an icon in the navigation that redirects to the about page
+discus_identifier: # Add your Disqus identifier
+ga_analytics: UA-88917213-1
+local_fonts: false # Change to true if you wish to use local fonts
+rss_enabled: true # Change to false if not
+scrollappear_enabled: true # Change to false to disable
 social:
   dribbble: # Add your Dribbble handle
   facebook: # Add your Facebook handle
+  flickr: # Add your Flickr handle
   github: ggomagundan
   linkedin: kai-park
-  flickr: # Add your Flickr handle
   twitter: # Add your Twitter handle
   email: ggogun@gmail.com
   bitcoin: 16MdVNJgvGYbVuaC6KrjGNy2RCrNsaPaZz
+  ethereum: "0x5debb97a6Cc1Fdf686a3C6aA804a623a21deD73c"
+
 
 # Important settings (change at own risk)
 
 assets:
-  compress:
-    css: true
-    js: true
   features:
     automatic_img_size: false
   sources:
-    - _assets/bower
     - _assets/fonts
     - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
-    - _vendor/
+    - _assets/yarn
 collections:
   my_tags:
     output: true
@@ -49,18 +48,19 @@ defaults:
     values:
       layout: articles_by_tag
 exclude:
-  - .bowerrc
   - .travis.yml
   - bin/*
-  - bower.json
   - circle.yml
   - Gemfile
   - Gemfile.lock
+  - package.json
   - README.md
   - vendor/
+  - yarn.lock
 gems:
   - jekyll-assets
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+paginate_path: /posts/page/:num/
 permalink: posts/:slug
