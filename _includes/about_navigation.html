@@ -1,5 +1,6 @@
 <nav class="header-nav {% if site.scrollappear_enabled %}appear{% endif %}">
-  <a href="{{ '/' | relative_url }}" class="header-logo" title="{{ site.name }}">Project List</a>
+  <!--<a href="{{ '/' | relative_url }}" class="header-logo" title="{{ site.name }}">Project List</a> -->
+  <span class="header-logo">Kai Park</span>
   <ul class="header-links">
     {% if site.about_enabled == true %}
       <li>
@@ -52,7 +53,7 @@
     {% endif %}
     {% if site.social.bitcoin %}
       <li>
-        <a href="{{ site.social.bitcoin }}" rel="noreferrer noopener" target="_blank" title="Bitcoin">
+        <a href="https://blockchain.info/address/{{ site.social.bitcoin }}" rel="noreferrer noopener" target="_blank" title="Bitcoin">
           <span class="icon icon-bitcoin"></span>
         </a>
       </li>

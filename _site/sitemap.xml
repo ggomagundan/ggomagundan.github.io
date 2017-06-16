@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/tag/design/</loc>
-<lastmod>2017-06-15T18:17:09+09:00</lastmod>
+<loc>http://localhost:4000/tag/gem/</loc>
+<lastmod>2017-06-16T16:56:28+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/tag/jekyll/</loc>
-<lastmod>2017-06-15T18:17:09+09:00</lastmod>
+<loc>http://localhost:4000/tag/javascript/</loc>
+<lastmod>2017-06-16T16:56:28+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/tag/web/</loc>
-<lastmod>2017-06-15T18:17:09+09:00</lastmod>
+<loc>http://localhost:4000/tag/rails/</loc>
+<lastmod>2017-06-16T16:56:28+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/tag/ruby/</loc>
+<lastmod>2017-06-16T16:56:28+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/posts/cookit-youhoo</loc>
