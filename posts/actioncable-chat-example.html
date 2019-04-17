@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>GGoMaGunDan | Page not found</title>
-  <meta name="description" content="Page not found">
+  <title>GGoMaGunDan | Rails5-ActionCable-Chat-Example</title>
+  <meta name="description" content="Simple Chat Example Using Rails5 ActionCable">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="Page not found">
+  <meta property="og:title" content="Rails5-ActionCable-Chat-Example">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:description" content="Page not found">
+  <meta property="og:url" content="/posts/actioncable-chat-example">
+  <meta property="og:description" content="Simple Chat Example Using Rails5 ActionCable">
   <meta property="og:site_name" content="GGoMaGunDan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="/404.html">
-  <meta name="twitter:title" content="Page not found">
-  <meta name="twitter:description" content="Page not found">
+  <meta name="twitter:url" content="/posts/actioncable-chat-example">
+  <meta name="twitter:title" content="Rails5-ActionCable-Chat-Example">
+  <meta name="twitter:description" content="Simple Chat Example Using Rails5 ActionCable">
 
   
     <meta property="og:image" content="/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
@@ -155,15 +155,108 @@
   </ul>
 </nav>
 
-        <div class="notfound-wrapper">
-  <div class="notfound-content">
-    <h1><a href="/" title="Back to homepage">GGoMaGunDan</a></h1>
-    <p>
-      Looks like you got lost. Let's get you back to the <a href="/">homepage</a>!
-    </p>
-  </div>
-</div>
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Rails5-ActionCable-Chat-Example</h1>
+            <p>Simple Chat Example Using Rails5 ActionCable</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                September 30, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  1 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/rails">rails</a>
+                
+                  <a href="/tag/ruby">ruby</a>
+                
+              </div>
+            </div>
+          </header>
 
+          <div class="article-content">
+            <p>Simple Chat Example using Rails5 ActionCable .</p>
+
+<p>And <code class="highlighter-rouge">Bootstrap4</code>, <code class="highlighter-rouge">mysql</code>, <code class="highlighter-rouge">redis</code></p>
+
+<h2 id="files">Files</h2>
+
+<ul>
+  <li>config/initializers/utf8mb4.rb ( For utf8mb4 Indexing)</li>
+  <li>app/views/chats/*</li>
+  <li>app/assets/javascripts/</li>
+  <li>cable.js</li>
+  <li>chats.js.coffee</li>
+  <li>application.js</li>
+  <li>channels/chat.js.coffee</li>
+  <li>app/assets/stylesheets/</li>
+  <li>application.scss</li>
+  <li>chats.scss</li>
+  <li>app/channels/</li>
+  <li>application_cable/channel.rb</li>
+  <li>application_cable/connection.rb</li>
+  <li>chat_channel.rb</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>You must change <code class="highlighter-rouge">config/environments/development.rb </code> File</p>
+
+<p>links : https://github.com/rails/rails/blob/61a7239e405982e78de15bd86583514248e6f525/actioncable/lib/action_cable/engine.rb#L25</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">config</span><span class="p">.</span><span class="nf">action_cable</span><span class="p">.</span><span class="nf">url</span> <span class="o">=</span> <span class="s2">"ws://localhost:3006/cable"</span>
+    <span class="n">config</span><span class="p">.</span><span class="nf">action_cable</span><span class="p">.</span><span class="nf">allowed_request_origins</span>  <span class="o">=</span> <span class="s2">"http://localhost:3006"</span>
+    <span class="c1"># My Proejct running on 3006 port</span>
+
+</code></pre></div></div>
+
+<p>If you not use mysql, change to <code class="highlighter-rouge">Gemfile</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rails db:migrate
+$ rails db:seed
+$ rails s [-p Port]
+</code></pre></div></div>
+
+<h2 id="contributing">Contributing</h2>
+
+<ol>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT
+License</a>.</p>
+
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Rails5-ActionCable-Chat-Example%20-%20/posts/actioncable-chat-example" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=/posts/actioncable-chat-example" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=/posts/actioncable-chat-example" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"/></svg>
+            </a>
+          </div>
+
+          
+        </article>
         <footer class="footer reveal">
   <p>
     Written by. ggomagundan

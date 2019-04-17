@@ -1,20 +1,90 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>GGoMaGunDan</title>
+    <description></description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>Coinone</title>
+        <description>Wrapping for coinone.co.kr API</description>
+        <pubDate>Wed, 08 Mar 2017 00:00:00 +0900</pubDate>
+        <link>/posts/coinone-rb</link>
+        <guid isPermaLink="true">/posts/coinone-rb</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Rails-Api-Docker</title>
+        <description>Build and run API app on the new environment using docker &amp; docker compose</description>
+        <pubDate>Wed, 22 Feb 2017 00:00:00 +0900</pubDate>
+        <link>/posts/rails-api-docker</link>
+        <guid isPermaLink="true">/posts/rails-api-docker</guid>
+      </item>
+    
+      <item>
+        <title>CurrentCurrency</title>
+        <description>Showing Current Currecy From Poloniex(BTC, USDT) And Coinone(KRW)</description>
+        <pubDate>Thu, 26 Jan 2017 00:00:00 +0900</pubDate>
+        <link>/posts/current-currency</link>
+        <guid isPermaLink="true">/posts/current-currency</guid>
+      </item>
+    
+      <item>
+        <title>Port-Scanner-rb</title>
+        <description>Port Scanning to specific host Concurrent-ruby</description>
+        <pubDate>Thu, 15 Dec 2016 00:00:00 +0900</pubDate>
+        <link>/posts/port-scanner-rb</link>
+        <guid isPermaLink="true">/posts/port-scanner-rb</guid>
+      </item>
+    
+      <item>
+        <title>Gentelella-On-Rails</title>
+        <description>Gentelella Admin Bootstrap Template on Rails 5</description>
+        <pubDate>Wed, 07 Dec 2016 00:00:00 +0900</pubDate>
+        <link>/posts/gentelella-on-rails</link>
+        <guid isPermaLink="true">/posts/gentelella-on-rails</guid>
+      </item>
+    
+      <item>
+        <title>Torrent-Parse</title>
+        <description>Parsing TorrentFile with nom and jag426/bittorrent From Rust Language</description>
+        <pubDate>Wed, 23 Nov 2016 00:00:00 +0900</pubDate>
+        <link>/posts/torrent-parser</link>
+        <guid isPermaLink="true">/posts/torrent-parser</guid>
+      </item>
+    
+      <item>
+        <title>Clipboard-Toastr-Rails</title>
+        <description>clipboard.js and toastr javascript Gem</description>
+        <pubDate>Tue, 15 Nov 2016 00:00:00 +0900</pubDate>
+        <link>/posts/clipboard-toastr-rails</link>
+        <guid isPermaLink="true">/posts/clipboard-toastr-rails</guid>
+      </item>
+    
+      <item>
+        <title>Rails5-ActionCable-Chat-Example</title>
+        <description>Simple Chat Example Using Rails5 ActionCable</description>
+        <pubDate>Fri, 30 Sep 2016 00:00:00 +0900</pubDate>
+        <link>/posts/actioncable-chat-example</link>
+        <guid isPermaLink="true">/posts/actioncable-chat-example</guid>
+      </item>
+    
+      <item>
+        <title>Shine-Rails-Example</title>
+        <description>Rails Example Using Shine Gem</description>
+        <pubDate>Tue, 27 Sep 2016 00:00:00 +0900</pubDate>
+        <link>/posts/shrine-rails-example</link>
+        <guid isPermaLink="true">/posts/shrine-rails-example</guid>
+      </item>
+    
+      <item>
+        <title>Custom Nifty Generators</title>
+        <description>Customized NiftyGenerators</description>
+        <pubDate>Tue, 06 Sep 2016 00:00:00 +0900</pubDate>
+        <link>/posts/custom-nifty-generators</link>
+        <guid isPermaLink="true">/posts/custom-nifty-generators</guid>
+      </item>
+    
   </channel>
 </rss>

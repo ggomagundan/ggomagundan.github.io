@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>GGoMaGunDan | Page not found</title>
-  <meta name="description" content="Page not found">
+  <title>GGoMaGunDan | Custom Nifty Generators</title>
+  <meta name="description" content="Customized NiftyGenerators">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="Page not found">
+  <meta property="og:title" content="Custom Nifty Generators">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/404.html">
-  <meta property="og:description" content="Page not found">
+  <meta property="og:url" content="/posts/custom-nifty-generators">
+  <meta property="og:description" content="Customized NiftyGenerators">
   <meta property="og:site_name" content="GGoMaGunDan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="/404.html">
-  <meta name="twitter:title" content="Page not found">
-  <meta name="twitter:description" content="Page not found">
+  <meta name="twitter:url" content="/posts/custom-nifty-generators">
+  <meta name="twitter:title" content="Custom Nifty Generators">
+  <meta name="twitter:description" content="Customized NiftyGenerators">
 
   
     <meta property="og:image" content="/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
@@ -155,15 +155,117 @@
   </ul>
 </nav>
 
-        <div class="notfound-wrapper">
-  <div class="notfound-content">
-    <h1><a href="/" title="Back to homepage">GGoMaGunDan</a></h1>
-    <p>
-      Looks like you got lost. Let's get you back to the <a href="/">homepage</a>!
-    </p>
-  </div>
-</div>
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Custom Nifty Generators</h1>
+            <p>Customized NiftyGenerators</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                September 6, 2016
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  1 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/rails">rails</a>
+                
+                  <a href="/tag/ruby">ruby</a>
+                
+                  <a href="/tag/gem">gem</a>
+                
+              </div>
+            </div>
+          </header>
 
+          <div class="article-content">
+            <p>Custom Nifty Generators using <code class="highlighter-rouge">lib</code> Directory</p>
+
+<h2 id="import-gem-list">Import Gem List</h2>
+
+<ul>
+  <li><a href="https://github.com/brianmario/mysql2">mysql2</a> : mysql connector</li>
+  <li><a href="https://github.com/ryanb/nifty-generators">nifty-generators</a> : nifty generator</li>
+  <li><a href="https://github.com/amatsuda/kaminari">kaminari</a> : pagination</li>
+  <li><a href="https://github.com/presidentbeef/brakeman">brakeman</a> : Security Scanner</li>
+  <li><a href="https://github.com/twbs/bootstrap-rubygem">bootstrap v4</a> : front-end framework</li>
+</ul>
+
+<h2 id="additional">Additional</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>config/initializers/utf8mb4.rb # For Conflict Encoding
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://github.com/rails/rails/issues/9855">MySQL UTF8MB4 breaks ActiveRecord</a></li>
+</ul>
+
+<h2 id="preparation">Preparation</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp config/database.yml.sample config/database.yml # if Use mysql
+</code></pre></div></div>
+
+<h2 id="file-list">File List</h2>
+
+<h4 id="action-on-controller">Action On Controller</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lib/templates/nifty/scaffold/actions/*.rb 
+
+# Alwalys redirect to index path
+</code></pre></div></div>
+
+<h4 id="controller-file">Controller File</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lib/templates/nifty/scaffold/controller.rb
+
+# Support `Strong Parameter` 
+</code></pre></div></div>
+
+<h4 id="view-file">View File</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lib/templates/nifty/scaffold/views/erb/*.html.erb
+
+# Design bootstrap
+</code></pre></div></div>
+
+<h2 id="full-documentation">Full documentation</h2>
+
+<p>The Documentation is at https://github.com/ryanb/nifty-generators</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<ol>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<p>This Code is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Custom+Nifty+Generators%20-%20/posts/custom-nifty-generators" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=/posts/custom-nifty-generators" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=/posts/custom-nifty-generators" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"/></svg>
+            </a>
+          </div>
+
+          
+        </article>
         <footer class="footer reveal">
   <p>
     Written by. ggomagundan

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>GGoMaGunDan | Coinone</title>
+  <meta name="description" content="Wrapping for coinone.co.kr API">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Coinone">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/coinone-rb">
+  <meta property="og:description" content="Wrapping for coinone.co.kr API">
+  <meta property="og:site_name" content="GGoMaGunDan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="/posts/coinone-rb">
+  <meta name="twitter:title" content="Coinone">
+  <meta name="twitter:description" content="Wrapping for coinone.co.kr API">
+
+  
+    <meta property="og:image" content="/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="GGoMaGunDan Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-dark-11327753546b2135c989eee5cd83497a2734b702928d016839d795f6c706e3d5.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-dark-d161409442b7e523089f24d08d0a55951549ece7504207c376d53b020713494d.png">
+      <link rel="stylesheet" type="text/css" href="/assets/dark-17432a9ca5ef63eab9b28bdc900735e24e7c5f1d1ca2a030679067b4e3e136f1.css">
+    
+
+  
+  
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="GGoMaGunDan">GGoMaGunDan</a>
+  <ul class="header-links">
+    
+    
+    
+    
+      <li>
+        <a href="https://medium.com/ggogun" rel="noreferrer noopener" target="_blank" title="Medium">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-medium">
+  <use href="/assets/medium-c490b76e2e7329f77cc2df18acc17452868ea861ed0e1ecf621c9777877068f5.svg#icon-medium" xlink:href="/assets/medium-c490b76e2e7329f77cc2df18acc17452868ea861ed0e1ecf621c9777877068f5.svg#icon-medium"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/ggomagundan" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://hub.docker.com/r/kaipark" rel="noreferrer noopener" target="_blank" title="Docker Hub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-docker">
+  <use href="/assets/docker-c339e74d6b786fbde73b16d23c150b731f34e6afba1693051596237af7ff9f2d.svg#icon-docker" xlink:href="/assets/docker-c339e74d6b786fbde73b16d23c150b731f34e6afba1693051596237af7ff9f2d.svg#icon-docker"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/kai-park" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.youtube.com/user/ggogun" rel="noreferrer noopener" target="_blank" title="Youtube">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-youtube">
+  <use href="/assets/youtube-e8aaee4449ebf16dda44d55c8f82df4e40f62ca5b3edc8a34fe71707eb9cf990.svg#icon-youtube" xlink:href="/assets/youtube-e8aaee4449ebf16dda44d55c8f82df4e40f62ca5b3edc8a34fe71707eb9cf990.svg#icon-youtube"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://blockexplorer.com/address/16MdVNJgvGYbVuaC6KrjGNy2RCrNsaPaZz" rel="noreferrer noopener" target="_blank" title="Bitcoin">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-bitcoin">
+  <use href="/assets/bitcoin-5b11c4ea91819f58e20217dfecd78cbb5c0f33928455c3b00485daaac83f433e.svg#icon-bitcoin" xlink:href="/assets/bitcoin-5b11c4ea91819f58e20217dfecd78cbb5c0f33928455c3b00485daaac83f433e.svg#icon-bitcoin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://etherscan.io/address/0x5debb97a6Cc1Fdf686a3C6aA804a623a21deD73c" rel="noreferrer noopener" target="_blank" title="Ethereum">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-ethereum">
+  <use href="/assets/ethereum-e5088bcff9dd6d4e90b95e54087447ad297d3d03511a4e22746f68346e671537.svg#icon-ethereum" xlink:href="/assets/ethereum-e5088bcff9dd6d4e90b95e54087447ad297d3d03511a4e22746f68346e671537.svg#icon-ethereum"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:ggogun@gmail.com" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-email">
+  <use href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email" xlink:href="/assets/email-782473193bf750036fdb90e8daa075508a20509d01854c09f3237c144a3f0601.svg#icon-email"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+  </ul>
+</nav>
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Coinone</h1>
+            <p>Wrapping for coinone.co.kr API</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                March 8, 2017
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  4 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/ruby">ruby</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <h1 id="coinone">Coinone</h1>
+<p><a href="https://badge.fury.io/rb/coinone"><img src="https://badge.fury.io/rb/coinone.svg" alt="GemVersion" /></a></p>
+
+<p><code class="highlighter-rouge">Coinone</code> Gem is Ruby Language porting from Coinone API, and only support V2.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'coinone'</span>
+</code></pre></div></div>
+
+<p>And then execute:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle
+</code></pre></div></div>
+
+<p>Or install it yourself as:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install coinone
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>First, You set <code class="highlighter-rouge">ACCESS_TOKEN</code> and <code class="highlighter-rouge">SECRET_KEY</code> using <a href="https://github.com/laserlemon/figaro">figaro</a> or <a href="https://github.com/bkeepers/dotenv">dotenv</a></p>
+
+<h4 id="account-v2">Account V2</h4>
+<ul>
+  <li>ACCOUNT V2 / Account Infomation</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Account</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">access_token: </span><span class="no">ENV</span><span class="p">[</span><span class="s1">'COINONE_ACCESS_TOKEN'</span><span class="p">],</span> <span class="ss">secret_key: </span><span class="no">ENV</span><span class="p">[</span><span class="s1">'COINONE_SECRET_KEY'</span><span class="p">])</span>
+
+<span class="n">user</span><span class="p">.</span><span class="nf">get_user_info</span>
+
+</code></pre></div></div>
+
+<h4 id="oauth">OAUTH</h4>
+
+<h4 id="order-v2">ORDER V2</h4>
+
+<h4 id="public">PUBLIC</h4>
+
+<p>Not Need <code class="highlighter-rouge">ACCESS_TOKEN</code> and <code class="highlighter-rouge">SECRET_KEY</code></p>
+
+<ul>
+  <li>PUBLIC / Currency</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">currency</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_currency</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>PUBLIC / Orderbook</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">orderbook</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_orderbook</span> <span class="c1"># Default "BTC"</span>
+
+<span class="n">btc_orderbook</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_orderbook</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"btc"</span><span class="p">)</span> <span class="c1"># BTC Orderbook</span>
+
+<span class="n">eth_orderbook</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_orderbook</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"eth"</span><span class="p">)</span> <span class="c1"># ETH Orderbook</span>
+
+<span class="n">etc_orderbook</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_orderbook</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"etc"</span><span class="p">)</span> <span class="c1"># ETC Orderbook</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>PUBLIC / Recent Complete Orders</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">complete_orders</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_complete_orders</span> <span class="c1"># Default "BTC" and "Hour"</span>
+
+<span class="n">btc_hour_complete_orders</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_complete_orders</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"btc"</span><span class="p">,</span> <span class="ss">period: </span><span class="s2">"hour"</span><span class="p">)</span> <span class="c1"># BTC and Hour Complete Orders</span>
+
+<span class="n">btc_day_complete_orders</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_complete_orders</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"btc"</span><span class="p">,</span> <span class="ss">period: </span><span class="s2">"day"</span><span class="p">)</span> <span class="c1"># BTC and Day Complete Orders</span>
+
+<span class="n">eth_hour_complete_orders</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_complete_orders</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"eth"</span><span class="p">,</span> <span class="ss">period: </span><span class="s2">"hour"</span><span class="p">)</span> <span class="c1"># ETH and Hour Complete Orders</span>
+
+<span class="n">eth_day_complete_orders</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_complete_orders</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"eth"</span><span class="p">,</span> <span class="ss">period: </span><span class="s2">"day"</span><span class="p">)</span> <span class="c1"># ETH and Day Complete Orders</span>
+
+<span class="n">etc_hour_complete_orders</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_complete_orders</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"etc"</span><span class="p">,</span> <span class="ss">period: </span><span class="s2">"hour"</span><span class="p">)</span> <span class="c1"># ETC and Hour Complete Orders</span>
+
+<span class="n">etc_day_complete_orders</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_complete_orders</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"etc"</span><span class="p">,</span> <span class="ss">period: </span><span class="s2">"day"</span><span class="p">)</span> <span class="c1"># ETC and Hour Complete Orders </span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>PUBLIC / Ticker</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ticker</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_ticker</span> <span class="c1"># Default "BTC"</span>
+
+<span class="n">btc_ticker</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_ticker</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"btc"</span><span class="p">)</span> <span class="c1"># BTC Ticker</span>
+
+<span class="n">etc_ticker</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_ticker</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"etc"</span><span class="p">)</span> <span class="c1"># ETH Ticker</span>
+
+<span class="n">etc_ticker</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_ticker</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"etc"</span><span class="p">)</span> <span class="c1"># ETC Ticker</span>
+
+<span class="n">all_ticker</span> <span class="o">=</span>  <span class="no">Coinone</span><span class="o">::</span><span class="no">Public</span><span class="p">.</span><span class="nf">get_ticker</span><span class="p">(</span><span class="ss">currency: </span><span class="s2">"all"</span><span class="p">)</span> <span class="c1"># ALL Ticker</span>
+
+</code></pre></div></div>
+
+<h4 id="transaction-v2">TRANSACTION V2</h4>
+
+<h2 id="todo">ToDo</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />ACCOUNT V2 / Account Infomation</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ACCOUNT V2 / Balance</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ACCOUNT V2 / Daily Balance</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ACCOUNT V2 / Deposit Address</li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ACCOUNT V2 / Virtual Account</p>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OAUTH / Delete Access Token</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OAUTH / Get Access Token</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OAUTH / Get Request  Token</li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />OAUTH / Refresh Access Token</p>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / Cancel All Order</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / Cancel Order</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / Limit Buy</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / Limit Sell</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / Market Buy</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / Market Sell</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / My Complete Orders</li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ORDER V2 / My Limit Orders</p>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />PUBLIC / Currency</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />PUBLIC / OrderBook</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />PUBLIC / Recent Complete Orders</li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />PUBLIC / Ticker</p>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />TRANSACTION V2 / 2-Factor Authentication</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />TRANSACTION V2 / Coin Transactions History</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />TRANSACTION V2 / KRW Transactions History</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />TRANSACTION V2 / Send Coin</li>
+</ul>
+
+<h2 id="full-documentation">Full documentation</h2>
+
+<p>The Documentation is at <a href="http://doc.coinone.co.kr/">Coinone Docs</a></p>
+
+<h2 id="change-log">Change Log</h2>
+
+<p>Current Version 0.1.0</p>
+
+<p>This link listing <a href="https://github.com/ggomagundan/coinone/blob/master/CHANGE_LOG.md">Change Log</a></p>
+
+<h2 id="contributing">Contributing</h2>
+
+<ol>
+  <li>Fork it</li>
+  <li>Create your feature branch (<code class="highlighter-rouge">git checkout -b my-new-feature</code>)</li>
+  <li>Commit your changes (<code class="highlighter-rouge">git commit -am 'Added some feature'</code>)</li>
+  <li>Push to the branch (<code class="highlighter-rouge">git push origin my-new-feature</code>)</li>
+  <li>Create new Pull Request</li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Coinone%20-%20/posts/coinone-rb" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=/posts/coinone-rb" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=/posts/coinone-rb" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"/></svg>
+            </a>
+          </div>
+
+          
+        </article>
+        <footer class="footer reveal">
+  <p>
+    Written by. ggomagundan
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88917213-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-88917213-1');
+  </script>
+
+
+<script type="text/javascript" src="/assets/vendor-c7660858f86a434b413963ad66674aac04cdf9b172bee75278aa23e144569dde.js"></script>
+
+
+  <script type="text/javascript" src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js"></script>
+
+
+
+  <script type="text/javascript" src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js"></script>
+
+
+<script type="text/javascript" src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js"></script>
+
+
+</body>
+</html>
