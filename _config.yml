@@ -7,7 +7,9 @@ blog_theme: dark # Or use dark
 
 # Optional settings
 
+theme_toggle: false # Change to true if you wish to show an icon in the navigation for dynamic theme toggling
 about_enabled: false # Change to true if you wish to show an icon in the navigation that redirects to the about page
+baseurl: # Set if blog doesn't sit at the root of the domain (format: /blog)
 discus_identifier: # Add your Disqus identifier
 ga_analytics: UA-88917213-1
 local_fonts: false # Change to true if you wish to use local fonts
@@ -23,16 +25,29 @@ social:
   email: ggogun@gmail.com
   bitcoin: 16MdVNJgvGYbVuaC6KrjGNy2RCrNsaPaZz
   ethereum: "0x5debb97a6Cc1Fdf686a3C6aA804a623a21deD73c"
-
+  gitlab: # Add your GitLab handle
+  youtube: ggogun
+  twitch: # Add your Twitch handle
+  discord: # Add you Discord server invitation ID
+  tumblr: # Add your Tumblr handle
+  bitbucket: # Add your Bitbucket handle
+  docker: kaipark
+  instagram: # Add your Instagram handle
+  keybase: # Add your Keybase handle
+  medium: ggogun
+  spotify: # Add your Spotify handle
+  stackoverflow: # Add your Stack Overflow ID number
+  steam: # Add your Steam handle
 
 # Important settings (change at own risk)
-
+#
 assets:
-  features:
-    automatic_img_size: false
+  plugins:
+    css: { autoprefixer: {}}
+    img: { optim: {}}
+  source_maps: false
   sources:
-    - _assets/fonts
-    - _assets/images
+    - _assets/icons
     - _assets/javascripts
     - _assets/stylesheets
     - _assets/yarn
@@ -54,6 +69,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - package.json
+  - package-lock.json
   - README.md
   - vendor/
   - yarn.lock

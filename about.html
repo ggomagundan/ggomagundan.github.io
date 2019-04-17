@@ -4,12 +4,12 @@ title: "About to Me"
 description: ""
 ---
 
-<div class="about {% if site.scrollappear_enabled %}appear{% endif %}">
+<div class="about {% if site.scrollappear_enabled %}scrollappear{% endif %}">
    <div class="about-info">
       <div class="row cv-section">
         <div class="col-sm-9">
           <div class="cv-section-title">
-            <img src="{% asset_path 'developer.png' %}" alt="dev image" >
+            {% asset developer.png %}
             <h1>
               박 병 상 (Kai Park)
               <small>Developer</small>
@@ -61,6 +61,47 @@ description: ""
               </div>
             </div>
             <div class="col-sm-9">
+
+              <div class="cv-item">
+                <p class="period">
+                  2017. 7 - 2019. 2
+                </p>
+                <h3>
+                  <strong>Korbit Exchange</strong>
+                </h3>
+                <h4>Full-Time</h4>
+
+                <br/>
+
+                <p>Web/Admin 작업</p>
+                <ul class="fill-circle">
+                  <li>Matching Engine 및 주문 관리</li>
+                  <li>디비 작업</li>
+                  <li>내부 Admin 작업</li>
+                </ul>
+
+                <p>Custody 작업</p>
+                <ul class="fill-circle">
+                  <li>신규 Coin Listing</li>
+                  <li>Crypto 입출금 관리</li>
+                </ul>
+                <p>개발환경</p>
+
+                <ul class="fill-circle">
+                  <li>AWS
+                    <ul>
+                      <li>EC2</li>
+                      <li>Aurora</li>
+                      <li>ActiveMQ</li>
+                      <li>VPC</li>
+                    </ul>
+                  </li>
+                  <li>Ruby On Rails 4</li>
+                  <li>Mysql</li>
+                </ul>
+              </div>
+
+
               <div class="cv-item">
                 <p class="period">
                   2017. 5 - 2017. 6
@@ -177,8 +218,6 @@ description: ""
           </div>
 
           <div class="col-sm-9">
-          
-            
             <div class="cv-item ">
               <p class="period none"></p>
               <h3 class="text-uppercase"><strong>BlockChain</strong></h3>
@@ -196,6 +235,7 @@ description: ""
               <ul class="fill-circle ">
                 <li>Ruby on Rails (3 Years)</li>
                 <li>Sinatra (Beginner)</li>
+                <li>Java Spring (1 Year)</li>
               </ul>
 
             </div>
@@ -205,6 +245,7 @@ description: ""
 
               <ul class="fill-circle ">
                 <li>MariaDB</li>
+                <li>Aws Aurora</li>
               </ul>
 
             </div>
@@ -332,10 +373,8 @@ description: ""
               <p>ACM ICPC Asia Daejeon (2011. 9 - 2011. 10)</p>
               <ul class="fill-circle">
                   <li>21위 수상</li>
-                  
               </ul>
           </div><!-- end .cv-item --> 
-          
        
           <div class="cv-item">
 
@@ -343,12 +382,9 @@ description: ""
 
               <h3><strong>High School</strong></h3>
               <h4></h4>
-              
               <p>호서전문대학교 주최 고등학생 정보보호대회 (2006. 9 ~ 2006. 11) </p>
-              
               <ul class="fill-circle">
                   <li>동상 수상</li>
-                  
               </ul>
 
               <p> 다음세대재단 (2005. 7 - 2005. 10)</p>
@@ -362,8 +398,6 @@ description: ""
               <ul class="fill-circle">
                   <li>경상북도 도대회 입상</li>
               </ul>
-              
-              
           </div>
         </div>
       </div>
